@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE gdml [
+<!ENTITY materials SYSTEM "/home/rahmans/geometry/geometry_optics_beam/materials.xml">
+]>
+
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+
+<define>
+	<position name="v0" x="60.4388" y="-36.6311" z="65.0000" unit="mm"/>
+	<position name="coneMother_sub_2_center" x="0" y="0" z="0.0000" unit="mm"/>
+</define>
+
+&materials;
+
+
+<solids>
+    <box lunit="mm" name="boxDetectors1" x="4000" y="4000" z="20"/>
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="coneMother_sub_2" rmax1="499" rmax2="499" rmin1="0" rmin2="0" startphi="0" z="1000"/>
+    <subtraction name="boxMotherDetector1">
+	<first ref="boxDetectors1"/> 
+	<second ref="coneMother_sub_2"/> 
+	<positionref ref="coneMother_sub_2_center"/>
+    </subtraction>
+
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher5" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/> <!--sakib detector changed rmin1 value from 499 to 0-->
+    
+</solids>
+
+<structure>
+
+    <volume name="logicWasher_5">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="solWasher5"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="29"/>
+    </volume>
+    
+
+    <volume name="logicDetector1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="boxDetectors1"/>
+     <!-- <solidref ref="boxMotherDetector"/> sakib detector changed this to expand plane detector to full radial range-->
+
+      <physvol name="planeDet_5">
+        <volumeref ref="logicWasher_5"/>
+        <position name="wash_phys_5_pos" unit="mm" x="0" y="0" z="0"/>
+      </physvol>
+      
+    </volume>
+</structure>
+
+<setup name="Default" version="1.0">
+	<world ref="logicDetector1"/>
+</setup>
+
+</gdml>
