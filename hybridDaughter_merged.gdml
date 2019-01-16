@@ -1735,8 +1735,11 @@
       </physvol>
    
 
-
-
+      <physvol>
+	<file name="geometry_optics_beam/beampipe.gdml"/>
+        <position name="beampipe_pos" unit="mm" z="17810+11140/2-DOFFSET"/>
+      </physvol>
+          
 
       <physvol name="DScoll_5">
         <volumeref ref="logicDScoll_5"/>
