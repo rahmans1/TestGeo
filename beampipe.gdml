@@ -16,9 +16,18 @@
   </materials>
 
    <solids>
-
+<!--
      <tube lunit="mm" aunit="deg" name="beamPipeDShybrid_solid" deltaphi="360"
 	   rmin="525" rmax="1200" z="world_Zlength"/>
+-->
+   <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="beamPipeDShybrid_solid">
+	<zplane rmin="525" rmax="1200" z="-world_Zlength/2"/>
+        <zplane rmin="525" rmax="1200" z="world_Zlength/2-800"/>
+        <zplane rmin="525" rmax="598" z="world_Zlength/2-800"/>
+        <zplane rmin="525" rmax="598" z="world_Zlength/2"/> 
+   </polycone>    
+
+   
 
      <tube lunit="mm" aunit="deg" name="lamShield1_solid" deltaphi="360"
 	   rmin="640.5" rmax="815" z="lamShield_thickness"/>
@@ -94,6 +103,7 @@
       <materialref ref="G4_Galactic"/>
       <solidref ref="beamPipeDShybrid_solid"/>
 
+<!--
       <physvol name="lamShield1_phys">
         <volumeref ref="lamShield1_logical"/>
         <position name="lamShield1_pos" unit="mm" z="17811 - positionOffset + lamShield_thickness/2."/>
@@ -108,7 +118,7 @@
         <volumeref ref="lamShield3_logical"/>
         <position name="lamShield3_pos" unit="mm" z="24200 - positionOffset + lamShield_thickness/2."/>
       </physvol>
-
+-->
       <physvol name="beamPipeDS_phys">
         <volumeref ref="beamPipeDS_logical"/>
         <position name="beamPipeDS_pos" unit="mm" z="0"/>
