@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/srahman/remoll/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define> 
   <position name="hallCenter" x="0" y="0" z="4000"/>
@@ -7,6 +7,7 @@
   <position name="upstreamCenter" x="0" y="0" z="7000."/>
   <position name="hybridCenter" x="0" y="0" z="13366.57"/>
   <position name="detectorCenter" x="0" y="0" z="28500."/>
+  <position name="pipeCenter" x="0" y="0" z="17810+11140/2"/>
   <rotation name="identity"/>
 </define>
 
@@ -30,7 +31,7 @@
       <solidref ref="boxMother"/>
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/targetDaughter_merged1.gdml"/>
+      <file name="/home/srahman/remoll/geometry/geometry_optics_beam/targetDaughter_merged1.gdml"/>
       <positionref ref="targetCenter"/>
       <rotationref ref="identity"/>
       </physvol>
@@ -43,29 +44,35 @@
 -->
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
+      <file name="/home/srahman/remoll/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
       <positionref ref="detectorCenter"/>
       <rotationref ref="identity"/>
       </physvol>
       
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged1.gdml"/>
+      <file name="/home/srahman/remoll/geometry/geometry_optics_beam/detectorDaughter_merged1.gdml"/>
       <position name="detectorCenter1" unit="mm" x="0.0" y="0.0" z="29450"/>
       <rotationref ref="identity"/>
       </physvol>
 
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
+      <file name="/home/srahman/remoll/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
       <positionref ref="upstreamCenter"/>
       <rotationref ref="identity"/>
       </physvol>
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/hybridDaughter_merged.gdml"/>
+      <file name="/home/srahman/remoll/geometry/geometry_optics_beam/hybridDaughter_merged1.gdml"/>
       <positionref ref="hybridCenter"/>
       <rotationref ref="identity"/>
-      </physvol>    
+      </physvol>   
+
+      <physvol>
+      <file name="/home/srahman/remoll/geometry/geometry_optics_beam/beampipe.gdml"/>
+      <positionref ref="pipeCenter"/>
+      <rotationref ref="identity"/>
+      </physvol>  
 
 
     </volume>
