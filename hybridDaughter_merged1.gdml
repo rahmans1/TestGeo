@@ -935,13 +935,22 @@
     <!--100 mm offset to prevent target mother volume overlapping with hall mother volume length is increased by 900 (modify this 900 = poly_extend) at the end to include poly shielding-->
     <!-- <box lunit="mm" name="boxDownstream" x="2*4500" y="6000 - 100" z="7865.68 + 2*950 + poly_extend"/> -->
     <box lunit="mm" name="boxDownstream_1" x="boxDSMother_width" y="boxDSMother_height" z="boxDSMother_length"/> <!-- Define the placement of the mother volume box here - centered at union_2_center -->
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="tubeSubtracted" rmin="525" rmax="1250" startphi="0" z="1000"/>
+    <subtraction name ="boxDownstream"> 
+      <first ref="boxDownstream_1"/>
+      <second ref="tubeSubtracted"/>
+      <position name="tubeSubtracted_pos" unit="mm" x="0" y="0" z="boxDSMother_length/2-1000/2" />
+    </subtraction> 
+
+<!--
     <box lunit="mm" name="boxDownstream_sub" x="boxDSMother_width" y="100+1" z="boxDSMother_length + 1"/>
     <tube aunit="deg" deltaphi="360" lunit="mm" name="DSmothertubeBeampipe_sub" rmax="DSmothertubeBeampipeMother_sub_rmax" rmin="0" startphi="0" z="DSmothertubeBeampipeMother_sub_length"/>    
-    <subtraction name ="boxDownstream_3"> <!-- _2"> -->
+    <subtraction name ="boxDownstream_3"> 
       <first ref="boxDownstream_1"/>
       <second ref="boxDownstream_sub"/>
       <positionref ref="DSmothersubtract_center_1" />
     </subtraction>
+-->
                                                         <!--FIXME 9/20/2017 remove the logical volumes for the intermediate beampipes (not implemented right now)
     <subtraction name ="boxDownstream_3">
       <first ref="boxDownstream_2"/>
@@ -962,6 +971,7 @@
       <zplane rmin="DSbeampipe_union_1_part2_rmin" rmax="DSbeampipe_union_1_part2_rmax" z="DSbeampipe_union_1_part2_length"/> 
     </polycone>
 
+<!-- Sakib
     <union name ="boxDownstream_4">
       <first ref="boxDownstream_3"/>
       <second ref="DSbeampipe_union_1"/>
@@ -972,7 +982,7 @@
       <second ref="DSbeampipe_union_2"/>
       <positionref ref="DSbeampipe_union_2_center" />
     </union>     
-
+-->
     <!--Following beampipe is not in use -->
     <!--Beam pipe 1 for a polycone center coordinate is at the front face-->
     <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="DSbeampipe_1"> 
@@ -1617,7 +1627,8 @@
     <volume name="logicDownstream">
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeDownstream"/> -->
-      <solidref ref="boxDownstream"/>
+     <solidref ref="boxDownstream"/> 
+      
 
 <!-- Old beampipe design not in use now -->
 <!-- 
