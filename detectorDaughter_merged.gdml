@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/rahmans/geometry/geometry_optics_beam/materials.xml">
+<!ENTITY materials SYSTEM "/home/srahman/remoll/geometry/geometry_optics_beam/materials.xml">
 ]>
 
-<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/srahman/remoll/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define>
 	<position name="v0" x="60.4388" y="-36.6311" z="65.0000" unit="mm"/>
@@ -16,14 +16,14 @@
 
 <solids>
     <box lunit="mm" name="boxDetectors" x="4000" y="4000" z="500"/>
-    <cone aunit="deg" deltaphi="360" lunit="mm" name="coneMother_sub_1" rmax1="499" rmax2="499" rmin1="0" rmin2="0" startphi="0" z="1000"/>
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="coneMother_sub_1" rmax1="599" rmax2="599" rmin1="0" rmin2="0" startphi="0" z="1000"/>
     <subtraction name="boxMotherDetector">
 	<first ref="boxDetectors"/> 
 	<second ref="coneMother_sub_1"/> 
 	<positionref ref="coneMother_sub_1_center"/>
     </subtraction>
 
-    <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/> <!--sakib detector changed rmin1 value from 499 to 0-->
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher" rmax1="1900" rmax2="1900" rmin1="599" rmin2="599" startphi="0" z="10"/> <!--sakib detector changed rmin1 value from 499 to 0-->
     
 </solids>
 
@@ -39,7 +39,7 @@
 
     <volume name="logicDetector">
       <materialref ref="Vacuum"/>
-      <solidref ref="boxDetectors"/>
+      <solidref ref="boxMotherDetector"/>
      <!-- <solidref ref="boxMotherDetector"/> sakib detector changed this to expand plane detector to full radial range-->
 
       <physvol name="planeDet_0">
