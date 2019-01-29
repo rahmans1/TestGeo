@@ -95,8 +95,10 @@
      </volume>
 
      <volume name="beamPipeDS_logical">
-       <materialref ref="G4_Al"/>
+       <materialref ref="VacuumKryptonite"/>
        <solidref ref="beamPipeDS_solid1"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="30"/>
      </volume>
 
      <volume name="beamPipeDShybrid_logical">
