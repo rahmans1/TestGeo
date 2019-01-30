@@ -51,7 +51,7 @@
       
       <physvol>
       <file name="/home/srahman/remoll/geometry/geometry_optics_beam/detectorDaughter_merged1.gdml"/>
-      <position name="detectorCenter1" unit="mm" x="0.0" y="0.0" z="29450"/>
+      <position name="detectorCenter1" unit="mm" x="0.0" y="0.0" z="31537"/>
       <rotationref ref="identity"/>
       </physvol>
 
