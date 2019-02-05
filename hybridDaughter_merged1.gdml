@@ -1337,7 +1337,7 @@
     </subtraction>     
 
 
-     <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher3" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+     <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher3" rmax1="1900" rmax2="1900" rmin1="shield_DS_beampipe_p3_DS_rmax+1" rmin2="shield_DS_beampipe_p3_DS_rmax+1" startphi="0" z="10"/>
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
 
