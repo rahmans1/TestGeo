@@ -710,7 +710,7 @@
     </subtraction>
     
     
-     <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher1" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+     <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher1" rmax1="1900" rmax2="1900" rmin1="shield_US_beampipe_DS_rmax+1" rmin2="shield_US_beampipe_DS_rmax+1" startphi="0" z="10"/>
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher2" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 </solids>
 
