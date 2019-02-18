@@ -347,7 +347,7 @@
 
     <!-- New merged col-1 -->
     <!--R max will be same as before, I'm starting with bore radius of the exit bore for whole col-1 and then subtract appropriately -->
-    <tube aunit="deg" deltaphi="360" lunit="mm" name="col1_0" rmax="COLL1_R4_U" rmin="0" startphi="0" z="COLL1_THICK"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="col1_0" rmax="COLL1_R4_U" rmin="0" startphi="0" z="COLL1_THICK"/> 
     <!-- Subtract the reverese tapered bore (this was the first design of merged col1) from front face till 40 cm (leaving last 10 cm with R of  COLL1_Ring4_R_D -->
     <cone aunit="deg" deltaphi="360" lunit="mm" name="col1_sub_0" rmax1="COLL1_sub_R_U" rmax2="COLL1_sub_R_D" rmin1="0" rmin2="0" startphi="0" z="COLL1_sub_Length + 0.1"/>
 <!--
@@ -546,7 +546,7 @@
           rmin1="COLL2_R2_U-DELTAT*((COLL2_R2_D-COLL2_R2_U)/COLL2_THICK)" 
           rmin2="COLL2_R2_D+DELTAT*((COLL2_R2_D-COLL2_R2_U)/COLL2_THICK)" startphi="-SEPTANT/4" z="COLL2_THICK+DELTAT*2"/>
 
-    <cone aunit="deg" deltaphi="360" lunit="mm" name="uscyl_2" rmax1="COLL2_R4_U" rmax2="COLL2_R4_D" rmin1="COLL2_R1_U" rmin2="COLL2_R1_D" startphi="0" z="COLL2_THICK"/>
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="uscyl_2" rmax1="COLL2_R4_U+1700" rmax2="COLL2_R4_D+1700" rmin1="COLL2_R1_U" rmin2="COLL2_R1_D" startphi="0" z="COLL2_THICK"/> <!--Increasing collimator radius to prevent high radius particles-->
 
     <cone aunit="deg" deltaphi="360" lunit="mm" name="coll2trap" rmax1="COLL2_R4_U+1000" rmax2="COLL2_R4_D+1000" rmin1="0.0" rmin2="0.0" startphi="0" z="1"/>
 
