@@ -1749,11 +1749,12 @@
       -->
 
 
-
+<!--
       <physvol name="planeDet_3">
         <volumeref ref="logicWasher_3"/>
         <position name="wash_phys_3_pos" unit="mm" x="0" y="0" z="-3450"/>
       </physvol>
+-->
       
       <physvol name="planeDet_4">
         <volumeref ref="logicWasher_4"/>

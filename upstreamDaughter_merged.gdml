@@ -910,11 +910,12 @@
         <positionref ref="posCOLL2TRAP"/>
       </physvol>
 -->
-
+<!--
       <physvol name="planeDet_1">
         <volumeref ref="logicWasher_1"/>
         <position name="wash_phys_1_pos" unit="mm" x="0" y="0" z="5925-UOFFSET+61"/>
       </physvol>
+-->
       
       <physvol name="planeDet_2">
         <volumeref ref="logicWasher_2"/>
