@@ -1485,16 +1485,16 @@
       </volume>
 
       <volume name="logicDScoll_5">
-<!--      <materialref ref="CW95"/> -->
-      <materialref ref="Copper"/>
+      <materialref ref="CW95"/> 
+      <!--<materialref ref="Copper"/>-->
       <solidref ref="dscoll5union_5"/>
       <auxiliary auxtype="SensDet" auxvalue="collDet"/>
       <auxiliary auxtype="DetNo" auxvalue="2005"/>
       </volume>
 
     <volume name="logicPDScollunion_1">
-<!--	<materialref ref="CW95"/>    -->
-	<materialref ref="Copper"/> 
+	<materialref ref="CW95"/>   
+	<!--<materialref ref="Copper"/>-->
 	<solidref ref="pdscoll_union_6"/> 
 	<auxiliary auxtype="SensDet" auxvalue="collDet"/>
 	<auxiliary auxtype="DetNo" auxvalue="2004"/>
