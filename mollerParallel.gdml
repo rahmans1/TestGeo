@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE gdml [
+<!ENTITY materials SYSTEM "/home/srahman/remoll/geometry/geometry_optics_beam/materials.xml">
+]>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/srahman/remoll/geometry/geometry_optics_beam/schema/gdml.xsd">
+
+
+<define>
+  <position name="trackingDetectorVirtualPlaneCenter_pos" z="25.635" unit="m"/>
+  <position name="trackingDetectorVirtualPlaneFront1_pos" z="-1.45" unit="m"/>
+  <position name="trackingDetectorVirtualPlaneFront2_pos" z="-1.25" unit="m"/>
+  <position name="trackingDetectorVirtualPlaneBack1_pos"  z="+1.25" unit="m"/>
+  <position name="trackingDetectorVirtualPlaneBack2_pos"  z="+1.45" unit="m"/>
+  <position name="mainDetectorVirtualPlane_pos" z="28.500" unit="m"/>
+</define>
+
+&materials; 
+
+<solids>
+
+ <!-- <tube
+    name="ParallelWorld_solid"
+    startphi="0" deltaphi="360" aunit="deg"
+    rmax="2000" rmin="0" z="100000" lunit="mm"/>-->
+
+<box lunit="mm" name="ParallelWorld_solid" x="200000" y="200000" z="200000"/>
+
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher1" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher2" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher3" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+
+</solids>
+
+<structure>
+    <volume name="pLogicWasher_1">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher1"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="27"/>
+    </volume>
+    <volume name="pLogicWasher_2">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher2"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="25"/>
+    </volume>
+    <volume name="pLogicWasher_3">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher3"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="28"/>
+    </volume>
+
+  <volume name="ParallelWorld_logical">
+    <materialref ref="G4_Galactic"/>
+    <solidref ref="ParallelWorld_solid"/>
+
+     <physvol name="pPlaneDet_1">
+        <volumeref ref="pLogicWasher_1"/>
+        <position name="wash_phys_1_pos" unit="mm" x="0" y="0" z="5986"/>
+     </physvol>
+     <physvol name="pPlaneDet_2">
+        <volumeref ref="pLogicWasher_2"/>
+        <position name="wash_phys_2_pos" unit="mm" x="0" y="0" z="9916.57"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_3">
+        <volumeref ref="pLogicWasher_3"/>
+        <position name="wash_phys_3_pos" unit="mm" x="0" y="0" z="28500"/>
+     </physvol>
+
+    <auxiliary auxtype="Alpha" auxvalue="0.1"/>
+  </volume>
+</structure>
+
+<setup name="Default" version="1.0">
+  <world ref="ParallelWorld_logical"/>
+</setup>
+
+</gdml>
