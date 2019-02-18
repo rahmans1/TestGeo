@@ -1095,7 +1095,7 @@
 	<quadrangular vertex1="COLL5_6" vertex2="COLL5_7" vertex3="COLL5_15" vertex4="COLL5_14" type="ABSOLUTE"/>
     </tessellated>
 
-    <cone aunit="deg" deltaphi="360" lunit="mm" name="pdscyl" rmax1="PCOLL2_R4_U" rmax2="PCOLL2_R4_D" rmin1="PCOLL2_R1_U" rmin2="PCOLL2_R1_D" startphi="0" z="PCOLL2_THICK"/>
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="pdscyl" rmax1="PCOLL2_R4_U+1700" rmax2="PCOLL2_R4_D+1700" rmin1="PCOLL2_R1_U" rmin2="PCOLL2_R1_D" startphi="0" z="PCOLL2_THICK"/>
 
     <cone aunit="deg" deltaphi="360" lunit="mm" name="pcoll2trap" rmax1="PCOLL2_R4_U+1000" rmax2="PCOLL2_R4_D+1000" rmin1="0" rmin2="0" startphi="0" z="1.0"/>
 
