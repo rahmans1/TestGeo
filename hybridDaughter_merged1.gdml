@@ -34,7 +34,7 @@
 
     <!-- main collimator number 4, adjust this -->
     <constant name="col4shift" value ="1500"/>
-    <constant name="posPCOLL2_z" value ="9825-DOFFSET-col4shift"/>
+    <constant name="posPCOLL2_z" value ="9825-DOFFSET-col4shift-50.0/2"/> <!--subtracting 50/2 from z to compensate for increased thickness so that downstream end still ends at the same point as before-->
     <position name="posPCOLL2" unit="mm" x="0" y="0" z="posPCOLL2_z"/>
     <constant name="PCOLL2_R1_U" value ="30"/> <!-- Was 38.0" for no good reason/> -->
     <constant name="PCOLL2_R1_D" value ="30"/> <!-- 8.0"/> -->
@@ -46,7 +46,7 @@
     <constant name="PCOLL2_R3_D" value ="171.4"/>
     <constant name="PCOLL2_R4_U" value ="300"/>
     <constant name="PCOLL2_R4_D" value ="300"/>
-    <constant name="PCOLL2_THICK" value ="100.0"/>
+    <constant name="PCOLL2_THICK" value ="150"/><!--100.0"/> increased the thickness by 50% to prevent punch through-->
 
 <!-- original numbers: FIXME also, this does not do the correct envelope matching that Tyler's envelopes suggests
     <constant name="PCOLL2_R1_U" value ="38.0"/>
@@ -1737,7 +1737,7 @@
         <rotationref ref="RotateZ_6"/>
       </physvol>
 
-<!-- ........................................ -->
+ <!--........................................ -->
 
 
       <!--Removing col-3 -->
