@@ -252,8 +252,8 @@
     <constant name="shield_US_beampipe_DS_rmin" value="31"/>
     <constant name="shield_US_beampipe_US_rmax" value="shield_US_beampipe_US_rmin+shield_US_beampipe_thickness"/>
     <constant name="shield_US_beampipe_DS_rmax" value="shield_US_beampipe_DS_rmin+shield_US_beampipe_thickness"/>
-    <position name="shield_US_beampipe_center" unit="mm" x="0" y="0" z="shield_US_beampipe_length/2 + posCOLL2z + COLL2_THICK/2 + 0.001"/>
-    
+    <position name="shield_US_beampipe_center" unit="mm" x="0" y="0" z="shield_US_beampipe_length/2 + posCOLL2z + COLL2_THICK/2 + 0.001-50/2"/>
+    <!--need to subtract 50/2 to accomdate for the beampipe moving downstream due to collimator thickness increasing-->
 
     <!-- Neutron Shielding -->
     <!-- Insert constant and position parameters for neutron shielding here -->   
