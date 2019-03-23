@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/srahman/remoll/geometry/geometry_optics_beam/materials.xml">
+<!ENTITY materials SYSTEM "/home/rahmans/geometry/geometry_optics_beam/materials.xml">
 ]>
-<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/srahman/remoll/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 
 <define>
@@ -30,6 +30,22 @@
   <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher2" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
   <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher3" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
+
+
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher5" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher6" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher7" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher8" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher9" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+
+
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher10" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+  <cone aunit="deg" deltaphi="360" lunit="mm" name="pSolWasher11" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+
+
+
 </solids>
 
 <structure>
@@ -52,6 +68,59 @@
       <auxiliary auxtype="DetNo" auxvalue="28"/>
     </volume>
 
+    <volume name="pLogicWasher_4">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher4"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="31"/>
+    </volume>
+    <volume name="pLogicWasher_5">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher5"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="32"/>
+    </volume>
+    <volume name="pLogicWasher_6">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher6"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="33"/>
+    </volume>
+
+    <volume name="pLogicWasher_7">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher7"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="34"/>
+    </volume>
+    <volume name="pLogicWasher_8">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher8"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="35"/>
+    </volume>
+    <volume name="pLogicWasher_9">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher9"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="36"/>
+    </volume>
+
+
+    <volume name="pLogicWasher_10">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher10"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="37"/>
+    </volume>
+    <volume name="pLogicWasher_11">
+      <materialref ref="VacuumDet"/>
+      <solidref ref="pSolWasher11"/>
+      <auxiliary auxtype="SensDet" auxvalue="pPlaneDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="38"/>
+    </volume>
+
+
   <volume name="ParallelWorld_logical">
     <materialref ref="G4_Galactic"/>
     <solidref ref="ParallelWorld_solid"/>
@@ -70,7 +139,52 @@
         <position name="wash_phys_3_pos" unit="mm" x="0" y="0" z="28500"/>
      </physvol>
 
-    <auxiliary auxtype="Alpha" auxvalue="0.1"/>
+
+
+     <physvol name="pPlaneDet_4">
+        <volumeref ref="pLogicWasher_4"/>
+        <position name="wash_phys_4_pos" unit="mm" x="0" y="0" z="26800"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_5">
+        <volumeref ref="pLogicWasher_5"/>
+        <position name="wash_phys_5_pos" unit="mm" x="0" y="0" z="27000"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_6">
+        <volumeref ref="pLogicWasher_6"/>
+        <position name="wash_phys_6_pos" unit="mm" x="0" y="0" z="27200"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_7">
+        <volumeref ref="pLogicWasher_7"/>
+        <position name="wash_phys_7_pos" unit="mm" x="0" y="0" z="27400"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_8">
+        <volumeref ref="pLogicWasher_8"/>
+        <position name="wash_phys_8_pos" unit="mm" x="0" y="0" z="27600"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_9">
+        <volumeref ref="pLogicWasher_9"/>
+        <position name="wash_phys_9_pos" unit="mm" x="0" y="0" z="27800"/>
+     </physvol>
+
+
+
+     <physvol name="pPlaneDet_10">
+        <volumeref ref="pLogicWasher_10"/>
+        <position name="wash_phys_10_pos" unit="mm" x="0" y="0" z="28000"/>
+     </physvol>
+
+     <physvol name="pPlaneDet_11">
+        <volumeref ref="pLogicWasher_11"/>
+        <position name="wash_phys_11_pos" unit="mm" x="0" y="0" z="28200"/>
+     </physvol>
+
+
+     <auxiliary auxtype="Alpha" auxvalue="0.1"/>
   </volume>
 </structure>
 
