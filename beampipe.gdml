@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/srahman/remoll/geometry/geometry_optics_beam/materials.xml">
+<!ENTITY materials SYSTEM "/home/rahmans/projects/def-jmammei/rahmans/geometry/geometry_optics_beam/materials.xml">
 ]>
 
 <gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="/home/srahman/remoll/geometry/geometry_optics_beam/schema/gdml.xsd">
+      xsi:noNamespaceSchemaLocation="/home/rahmans/projects/def-jmammei/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
   <define>
     <constant name="globalPositionOffset" value="17810"/>
