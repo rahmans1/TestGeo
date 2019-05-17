@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/rahmans/geometry/remoll-2.0.0/geometry_merged/materials.xml">
+<!ENTITY materials SYSTEM "/home/rahmans/geometry/geometry_optics_beam/materials.xml">
 ]>
 
-<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/remoll-2.0.0/geometry_merged/schema/gdml.xsd">
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define>
 
   <constant name="tubeTarget_rmax" value="40"/>
-  <constant name="tubeTarget_length" value="1500"/>
+  <constant name="tubeTarget_length" value="1250"/>
 
   <!-- Mother volume parameters -->
   <constant name="boxTargetMother_width" value="9500"/>
@@ -214,6 +214,7 @@
     <volume name="h2Targ">
       <materialref ref="LiquidHydrogen"/>
       <solidref ref="tubeTarget"/>
+      <auxiliary auxtype="TargetSamplingVolume" auxvalue=""/>
     </volume>
 
     <volume name="TargShield_topdisk_logic">
@@ -330,6 +331,7 @@
         <positionref ref="LeadCollar_center_1"/>
       </physvol>
 -->
+     <auxiliary auxtype="TargetSystem" auxvalue=""/>
     </volume>
 
 </structure>

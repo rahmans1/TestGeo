@@ -9,7 +9,7 @@
 <define>
 
   <constant name="tubeTarget_rmax" value="40"/>
-  <constant name="tubeTarget_length" value="1250"/>
+  <constant name="tubeTarget_length" value="1500"/>
 
   <!-- Mother volume parameters -->
   <constant name="boxTargetMother_width" value="9500"/>

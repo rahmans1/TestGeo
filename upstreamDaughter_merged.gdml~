@@ -927,7 +927,7 @@
 
       <physvol name="UScoil_0">
         <volumeref ref="logicUScoilunion_0"/>
-        <position name="coil_offset_pos" unit="mm" x="3" y="0" z="0"/>
+        <position name="coil_offset_pos" unit="mm" x="0" y="0" z="0"/>
         <rotationref ref="RotateZ_0"/>
       </physvol>
 

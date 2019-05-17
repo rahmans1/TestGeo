@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/srahman/remoll/geometry/remoll-2.0.0/geometry_merged/materials.xml">
+<!ENTITY materials SYSTEM "/home/rahmans/geometry/remoll-2.0.0/geometry_merged/materials.xml">
 ]>
 
-<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/srahman/remoll/geometry/remoll-2.0.0/geometry_merged/schema/gdml.xsd">
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/remoll-2.0.0/geometry_merged/schema/gdml.xsd">
 
 <!--Used to resolve why hall detector missing any hits and how to include the detector+hall mother volume without making any volume overlaps or encapsulations -->
 <define>
