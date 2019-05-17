@@ -140,17 +140,17 @@
      </physvol>
 
 
-
+<!--
      <physvol name="pPlaneDet_4">
         <volumeref ref="pLogicWasher_4"/>
         <position name="wash_phys_4_pos" unit="mm" x="0" y="0" z="26800"/>
      </physvol>
-
+-->
      <physvol name="pPlaneDet_5">
         <volumeref ref="pLogicWasher_5"/>
         <position name="wash_phys_5_pos" unit="mm" x="0" y="0" z="27000"/>
      </physvol>
-
+<!--
      <physvol name="pPlaneDet_6">
         <volumeref ref="pLogicWasher_6"/>
         <position name="wash_phys_6_pos" unit="mm" x="0" y="0" z="27200"/>
@@ -182,7 +182,7 @@
         <volumeref ref="pLogicWasher_11"/>
         <position name="wash_phys_11_pos" unit="mm" x="0" y="0" z="28200"/>
      </physvol>
-
+-->
 
      <auxiliary auxtype="Alpha" auxvalue="0.1"/>
   </volume>
