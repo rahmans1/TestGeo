@@ -41,12 +41,13 @@
       <rotationref ref="identity"/>
       </physvol>
 -->
+<!--
       <physvol>
       <file name="/home/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
       <positionref ref="detectorCenter"/>
       <rotationref ref="identity"/>
       </physvol>
-
+-->
       <physvol>
 	    <file name="/home/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
 	    <positionref ref="upstreamCenter"/>
