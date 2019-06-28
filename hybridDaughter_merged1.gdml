@@ -1767,19 +1767,19 @@
         <position name="beampipe_pos" unit="mm" z="17810+11140/2-DOFFSET"/>
       </physvol>
 -->         
-
+<!--
       <physvol name="DScoll_5">
         <volumeref ref="logicDScoll_5"/>
         <positionref ref="posCOLL5"/>
 	<rotationref ref="ARotateZ_0"/> 
       </physvol>
-
-<!-- Collimator 4 -->
+-->
+<!-- Collimator 4 
       <physvol name="DScoll_6">
 	<volumeref ref="logicPDScollunion_1"/>
         <positionref ref="posPCOLL2"/>
       </physvol>
-
+-->
 <!--pcoll2trap_phys is removed since this is overlapping with shblk 4 poly shielding -->
 <!--
 
