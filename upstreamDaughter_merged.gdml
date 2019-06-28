@@ -97,11 +97,11 @@
     <constant name="COLL2_R1_U" value ="29.55"/>
     <constant name="COLL2_R1_D" value ="29.55"/>
     <!-- coll sep, inner rad, adjust this -->
-    <constant name="COLL2_R2_U" value ="35.3"/>
-    <constant name="COLL2_R2_D" value ="35.3"/>
+    <constant name="COLL2_R2_U" value ="35"/><!--"v6=40,v5=31 v4=38, v3=40, v2=45.19"/>--><!--"v1=36.15"/>-->
+    <constant name="COLL2_R2_D" value ="35"/><!--"36.15"/>-->
     <!-- coll sep, outer rad, adjust this -->
-    <constant name="COLL2_R3_U" value ="98.0"/>
-    <constant name="COLL2_R3_D" value ="98.0"/>
+    <constant name="COLL2_R3_U" value ="98"/>  <!--v7=35-98, v8=35-108-->
+    <constant name="COLL2_R3_D" value ="98"/>
     <constant name="COLL2_R4_U" value ="300"/>
     <constant name="COLL2_R4_D" value ="300"/>
 
