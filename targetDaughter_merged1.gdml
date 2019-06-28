@@ -9,7 +9,7 @@
 <define>
 
   <constant name="tubeTarget_rmax" value="40"/>
-  <constant name="tubeTarget_length" value="1500"/>
+  <constant name="tubeTarget_length" value="1250"/>
 
   <!-- Mother volume parameters -->
   <constant name="boxTargetMother_width" value="9500"/>
@@ -284,7 +284,7 @@
 
       <physvol>
         <volumeref ref="h2Targ"/>
-        <position name="targ_center1" unit="mm" x="0" y="0" z="0"/>
+        <position name="targ_center1" unit="mm" x="0" y="0" z="500"/>
       </physvol>
 
       <!--Shown below are initial target shielding cylinder - Rakitha  -->
