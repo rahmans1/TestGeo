@@ -92,7 +92,7 @@
 
     <!--    <position name="posCOLL2" unit="mm" x="0" y="0" z="5600-UOFFSET"/> -->
     <!-- main coll, adjust this -->
-    <position name="posCOLL2" unit="mm" x="0" y="0" z="5925-UOFFSET-50/2"/> <!--subtracting 50/2 from z to compensate for increased thickness so that downstream end still ends at the same point as before-->
+    <position name="posCOLL2" unit="mm" x="0" y="0" z="5925-UOFFSET-50/2-75"/> <!--subtracting 50/2 from z to compensate for increased thickness so that downstream end still ends at the same point as before. Walking up collimator by 75 mmm-->
     <!--Shielding beam pipe overlap with col-2 so I increased to bore radius in col-2 from 26.0 to 29.55 -->
     <constant name="COLL2_R1_U" value ="29.55"/>
     <constant name="COLL2_R1_D" value ="29.55"/>
@@ -100,8 +100,8 @@
     <constant name="COLL2_R2_U" value ="35"/><!--"v6=40,v5=31 v4=38, v3=40, v2=45.19"/>--><!--"v1=36.15"/>-->
     <constant name="COLL2_R2_D" value ="35"/><!--"36.15"/>-->
     <!-- coll sep, outer rad, adjust this -->
-    <constant name="COLL2_R3_U" value ="98"/>  <!--v7=35-98, v8=35-108-->
-    <constant name="COLL2_R3_D" value ="98"/>
+    <constant name="COLL2_R3_U" value ="103"/>  <!--v7=35-98, v8=35-108,new version 75 after walking the collimator up 35-103-->
+    <constant name="COLL2_R3_D" value ="103"/>
     <constant name="COLL2_R4_U" value ="300"/>
     <constant name="COLL2_R4_D" value ="300"/>
 
@@ -252,8 +252,8 @@
     <constant name="shield_US_beampipe_DS_rmin" value="31"/>
     <constant name="shield_US_beampipe_US_rmax" value="shield_US_beampipe_US_rmin+shield_US_beampipe_thickness"/>
     <constant name="shield_US_beampipe_DS_rmax" value="shield_US_beampipe_DS_rmin+shield_US_beampipe_thickness"/>
-    <position name="shield_US_beampipe_center" unit="mm" x="0" y="0" z="shield_US_beampipe_length/2 + posCOLL2z + COLL2_THICK/2 + 0.001-50/2"/>
-    <!--need to subtract 50/2 to accomdate for the beampipe moving downstream due to collimator thickness increasing-->
+    <position name="shield_US_beampipe_center" unit="mm" x="0" y="0" z="shield_US_beampipe_length/2 + posCOLL2z + COLL2_THICK/2 + 0.001-50/2-75"/>
+    <!--need to subtract 50/2 to accomdate for the beampipe moving downstream due to collimator thickness increasing. An additional 75 mm subtracted to move the beampipe upstream.-->
 
     <!-- Neutron Shielding -->
     <!-- Insert constant and position parameters for neutron shielding here -->   
