@@ -30,25 +30,25 @@
     <!--Merged Col-1  Radii for reversed tapered design -->
     <!--R1_U is front face inner R4_U is front face outer -->
     <!--R1_D is back face inner R4_D is back face outer -->
-    <constant name="COLL1_R1_U" value ="16.7997"/>
-    <constant name="COLL1_R1_D" value ="15.808"/>
+    <constant name="COLL1_R1_U" value = "19.960"/> <!--"16.7997"/>-->
+    <constant name="COLL1_R1_D" value ="13.908"/><!--"15.808"/>-->
     <!--to keep 0.3060 deg use 27.638 -->
     <!--to keep 0.3510 deg use 31.703 -->
     <constant name="COLL1_R4_U" value ="31.703"/>
     <constant name="COLL1_R4_D" value ="31.703"/>
 
     <!-- Set of Radial rings to keep constant edep each will be 10 cm radius quoted here is the inner radius of each ring-->
-    <constant name="COLL1_Ring1_R_U" value ="24.0"/>
-    <constant name="COLL1_Ring1_R_D" value ="24.0"/>
+    <constant name="COLL1_Ring1_R_U" value ="22.1"/><!--"24.0"/>-->
+    <constant name="COLL1_Ring1_R_D" value ="22.1"/><!--"24.0"/>-->
     <constant name="COLL1_Ring1_Length" value ="100.0"/>
-    <constant name="COLL1_Ring2_R_U" value ="20.386"/>
-    <constant name="COLL1_Ring2_R_D" value ="20.386"/>
+    <constant name="COLL1_Ring2_R_U" value ="18.489"/><!--"20.386"/>-->
+    <constant name="COLL1_Ring2_R_D" value ="18.489"/><!--"20.386"/>-->
     <constant name="COLL1_Ring2_Length" value ="100.0"/>
-    <constant name="COLL1_Ring3_R_U" value ="18.696"/>
-    <constant name="COLL1_Ring3_R_D" value ="18.696"/>
+    <constant name="COLL1_Ring3_R_U" value ="16.796"/><!--"18.696"/>-->
+    <constant name="COLL1_Ring3_R_D" value ="16.796"/><!--"18.696"/>-->
     <constant name="COLL1_Ring3_Length" value ="100.0"/>
     <!--Exit 10 cm of the col-1 will be conical bore cylinder to restrict 0.1596 deg therefore use this to first subtract col-l bore this done by setting COLL1_R1_D to DS radius-->
-    <constant name="COLL1_Ring4_R_U" value ="15.529"/>
+    <constant name="COLL1_Ring4_R_U" value ="13.629"/><!--"15.529"/>-->
     <constant name="COLL1_Ring4_R_D" value ="COLL1_R1_D"/>
     <constant name="COLL1_Ring4_Length" value ="100.0"/>
     <!-- Bore from front till 400 mm will be inverse tapered as the initial design and rings will substracted accordingly after bore is created with this dimensions -->
