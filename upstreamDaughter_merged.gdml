@@ -713,6 +713,27 @@
     
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher1" rmax1="1900" rmax2="1900" rmin1="shield_US_beampipe_DS_rmax+1" rmin2="shield_US_beampipe_DS_rmax+1" startphi="0" z="10"/>
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher2" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
+
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe">
+ <zplane rmin="21.336" rmax="22.225" z="5975-UOFFSET"/>
+ <zplane rmin="21.336" rmax="22.225" z="6300-UOFFSET"/>
+ <zplane rmin="21.336" rmax="23.8125" z="6300-UOFFSET"/>
+ <zplane rmin="22.9235" rmax="23.8125" z="6300-UOFFSET"/>
+ <zplane rmin="22.9235" rmax="23.8125" z="6600-UOFFSET"/>
+ <zplane rmin="22.9235" rmax="25.4" z="6600-UOFFSET"/>
+ <zplane rmin="24.511" rmax="25.4" z="6600-UOFFSET"/>
+ <zplane rmin="24.511" rmax="25.4" z="7000-UOFFSET"/>
+ <zplane rmin="24.511" rmax="26.9875" z="7000-UOFFSET"/>
+ <zplane rmin="26.0985" rmax="26.9875" z="7000-UOFFSET"/>
+ <zplane rmin="26.0985" rmax="26.9875" z="7400-UOFFSET"/>
+ <zplane rmin="26.0985" rmax="28.575" z="7400-UOFFSET"/>
+ <zplane rmin="27.686" rmax="28.575" z="7400-UOFFSET"/>
+ <zplane rmin="27.686" rmax="28.575" z="7800-UOFFSET"/>
+ <zplane rmin="27.686" rmax="30.1625" z="7800-UOFFSET"/>
+ <zplane rmin="29.2735" rmax="30.1625" z="7800-UOFFSET"/>
+ <zplane rmin="29.2735" rmax="30.1625" z="8025-UOFFSET"/>
+</polycone>
 </solids>
 
 
@@ -883,10 +904,23 @@
       <auxiliary auxtype="Color" auxvalue="blue"/>
     </volume>
 
+     <volume name="logicUSbeampipe">
+	<materialref ref="Aluminum"/>
+        <solidref ref="solid_USbeampipe"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="51"/>
+     </volume>
+
     <volume name="logicUpstream">
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeUpstream"/> -->
       <solidref ref="boxUpstream"/>
+
+     <physvol name="USbeampipe">
+        <volumeref ref="logicUSbeampipe"/>
+        <positionref ref="CENTER"/>
+      </physvol>
+
 
       <physvol name="UScoll_1">
         <volumeref ref="logicUScoll_1"/>
