@@ -1720,7 +1720,7 @@
         <volumeref ref="shield_DS_beampipe_logic"/>
         <positionref ref="shield_DS_beampipe_center"/>
       </physvol>
-- -->
+-->
 
 <!-- Comment out for optics runs-Sakib -->
 

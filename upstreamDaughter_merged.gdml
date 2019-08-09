@@ -1067,7 +1067,7 @@
         <volumeref ref="shield_US_beampipe_1_logic"/>
         <positionref ref="shield_US_beampipe_center"/>
       </physvol>
--- -->
+-->
    </volume>
 </structure>
 
