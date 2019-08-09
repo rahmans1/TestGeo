@@ -94,8 +94,8 @@
     <!-- main coll, adjust this -->
     <position name="posCOLL2" unit="mm" x="0" y="0" z="5925-UOFFSET-50/2-75"/> <!--subtracting 50/2 from z to compensate for increased thickness so that downstream end still ends at the same point as before. Walking up collimator by 75 mmm-->
     <!--Shielding beam pipe overlap with col-2 so I increased to bore radius in col-2 from 26.0 to 29.55 -->
-    <constant name="COLL2_R1_U" value ="29.55"/>
-    <constant name="COLL2_R1_D" value ="29.55"/>
+    <constant name="COLL2_R1_U" value ="21.336"/>   <!--29.55"/>-->
+    <constant name="COLL2_R1_D" value ="21.336"/>   <!--29.55"/>-->
     <!-- coll sep, inner rad, adjust this -->
     <constant name="COLL2_R2_U" value ="35"/><!--"v6=40,v5=31 v4=38, v3=40, v2=45.19"/>--><!--"v1=36.15"/>-->
     <constant name="COLL2_R2_D" value ="35"/><!--"36.15"/>-->
@@ -715,8 +715,18 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher2" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
 
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12">
+ <zplane rmin="13.908" rmax="14.908" z="5675-UOFFSET"/>
+ <zplane rmin="13.908" rmax="14.908" z="5700-UOFFSET"/>
+ <zplane rmin="13.908" rmax="22.225" z="5700-UOFFSET"/>
+ <zplane rmin="21.336" rmax="22.225" z="5700-UOFFSET"/>
+ <zplane rmin="21.336" rmax="22.225" z="5750-UOFFSET"/>
+</polycone>
+
+
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe">
- <zplane rmin="21.336" rmax="22.225" z="5975-UOFFSET"/>
+ <zplane rmin="21.336" rmax="22.225" z="5900-UOFFSET"/>
  <zplane rmin="21.336" rmax="22.225" z="6300-UOFFSET"/>
  <zplane rmin="21.336" rmax="23.8125" z="6300-UOFFSET"/>
  <zplane rmin="22.9235" rmax="23.8125" z="6300-UOFFSET"/>
@@ -904,6 +914,13 @@
       <auxiliary auxtype="Color" auxvalue="blue"/>
     </volume>
 
+     <volume name="logicUSbeampipe_col12">
+	<materialref ref="Aluminum"/>
+        <solidref ref="solid_USbeampipe_col12"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="50"/>
+     </volume>
+
      <volume name="logicUSbeampipe">
 	<materialref ref="Aluminum"/>
         <solidref ref="solid_USbeampipe"/>
@@ -915,6 +932,11 @@
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeUpstream"/> -->
       <solidref ref="boxUpstream"/>
+
+     <physvol name="USbeampipe_col12">
+        <volumeref ref="logicUSbeampipe_col12"/>
+        <positionref ref="CENTER"/>
+      </physvol>
 
      <physvol name="USbeampipe">
         <volumeref ref="logicUSbeampipe"/>
@@ -950,12 +972,12 @@
         <position name="wash_phys_1_pos" unit="mm" x="0" y="0" z="5925-UOFFSET+61"/>
       </physvol>
 -->
-      
+  <!--    
       <physvol name="planeDet_2">
         <volumeref ref="logicWasher_2"/>
         <position name="wash_phys_2_pos" unit="mm" x="0" y="0" z="1015"/>
       </physvol>
-      
+  -->
       
 
 
@@ -1040,12 +1062,12 @@
         <positionref ref="beampipe_3_center"/>
       </physvol>
 -->
-<!-- Commenting out beamshield-->
+<!-- Commenting out beamshield-
       <physvol>
         <volumeref ref="shield_US_beampipe_1_logic"/>
         <positionref ref="shield_US_beampipe_center"/>
       </physvol>
-<!-- -->
+-- -->
    </volume>
 </structure>
 

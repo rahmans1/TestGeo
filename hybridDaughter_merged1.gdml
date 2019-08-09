@@ -1715,12 +1715,12 @@
 -->
 
 <!-- Downstream of coll4 central collimating beampipe -->
-<!--Commenting out beamshield-->
+<!--Commenting out beamshield-
       <physvol>
         <volumeref ref="shield_DS_beampipe_logic"/>
         <positionref ref="shield_DS_beampipe_center"/>
       </physvol>
-<!-- -->
+- -->
 
 <!-- Comment out for optics runs-Sakib -->
 
@@ -1815,12 +1815,12 @@
         <position name="wash_phys_3_pos" unit="mm" x="0" y="0" z="-3450"/>
       </physvol>
 -->
-      
+  <!--    
       <physvol name="planeDet_4">
         <volumeref ref="logicWasher_4"/>
         <position name="wash_phys_4_pos" unit="mm" x="0" y="0" z="3450"/>
       </physvol>
-   
+   -->
 <!--
       <physvol>
 	<file name="/home/rahmans/geometry/geometry_optics_beam/beampipe.gdml"/>
