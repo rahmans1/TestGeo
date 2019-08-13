@@ -36,8 +36,8 @@
     <constant name="col4shift" value ="1500"/>
     <constant name="posPCOLL2_z" value ="9825-DOFFSET-col4shift-50.0/2"/> <!--subtracting 50/2 from z to compensate for increased thickness so that downstream end still ends at the same point as before-->
     <position name="posPCOLL2" unit="mm" x="0" y="0" z="posPCOLL2_z"/>
-    <constant name="PCOLL2_R1_U" value ="30"/> <!-- Was 38.0" for no good reason/> -->
-    <constant name="PCOLL2_R1_D" value ="30"/> <!-- 8.0"/> -->
+    <constant name="PCOLL2_R1_U" value ="30.861"/> <!-- Was 38.0" for no good reason, then 30/> -->
+    <constant name="PCOLL2_R1_D" value ="30.861"/> <!-- 8.0"/> -->
     <!-- coll sep, inner rad, adjust this -->
     <constant name="PCOLL2_R2_U" value ="53.5"/>  <!-- was 64, then 52.5 but still had bad envelope"/>then settled on 50 but now improved -->
     <constant name="PCOLL2_R2_D" value ="53.5"/>
