@@ -1365,12 +1365,18 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
 
-<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe">
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe_col4">
  <zplane rmin="29.2735" rmax="30.1625" z="8025.0-DOFFSET"/>
  <zplane rmin="29.2735" rmax="30.1625" z="8100.0-DOFFSET"/>
  <zplane rmin="29.2735" rmax="31.75" z="8100.0-DOFFSET"/>
  <zplane rmin="29.2735" rmax="31.75" z="8100.889-DOFFSET"/>
  <zplane rmin="30.861" rmax="31.75" z="8100.889-DOFFSET"/>
+ <zplane rmin="30.861" rmax="31.75" z="8225.0-DOFFSET"/>
+</polycone>
+
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe">
+ <zplane rmin="30.861" rmax="31.75" z="8375-DOFFSET"/>
  <zplane rmin="30.861" rmax="31.75" z="8400.0-DOFFSET"/>
  <zplane rmin="30.861" rmax="34.925" z="8400.0-DOFFSET"/>
  <zplane rmin="30.861" rmax="34.925" z="8401.651-DOFFSET"/>
@@ -1718,6 +1724,15 @@
       <auxiliary auxtype="Color" auxvalue="blue"/>
     </volume>
 
+
+
+     <volume name="logicDSbeampipe_col4">
+	<materialref ref="Aluminum"/>
+        <solidref ref="solid_DSbeampipe_col4"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="54"/>
+     </volume>
+
     <volume name="logicDSbeampipe">
 	<materialref ref="Aluminum"/>
         <solidref ref="solid_DSbeampipe"/>
@@ -1730,6 +1745,10 @@
       <!-- <solidref ref="tubeDownstream"/> -->
      <solidref ref="boxDownstream_1"/> 
       
+      <physvol name="DSbeampipe_col4">
+        <volumeref ref="logicDSbeampipe_col4"/>
+        <positionref ref="CENTER"/>
+      </physvol>
  
      <physvol name="DSbeampipe">
         <volumeref ref="logicDSbeampipe"/>
