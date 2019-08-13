@@ -1706,11 +1706,12 @@
       <!-- <solidref ref="tubeDownstream"/> -->
      <solidref ref="boxDownstream_1"/> 
       
- 
+<!-- 
      <physvol name="DSbeampipe">
         <volumeref ref="logicDSbeampipe"/>
         <positionref ref="CENTER"/>
       </physvol>
+-->
 
 <!-- Old beampipe design not in use now -->
 <!-- 
