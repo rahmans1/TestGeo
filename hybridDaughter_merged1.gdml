@@ -39,11 +39,11 @@
     <constant name="PCOLL2_R1_U" value ="30"/> <!-- Was 38.0" for no good reason/> -->
     <constant name="PCOLL2_R1_D" value ="30"/> <!-- 8.0"/> -->
     <!-- coll sep, inner rad, adjust this -->
-    <constant name="PCOLL2_R2_U" value ="50"/>  <!-- was 64, then 52.5 but still had bad envelope"/> -->
-    <constant name="PCOLL2_R2_D" value ="50"/>
+    <constant name="PCOLL2_R2_U" value ="53.5"/>  <!-- was 64, then 52.5 but still had bad envelope"/>then settled on 50 but now improved -->
+    <constant name="PCOLL2_R2_D" value ="53.5"/>
     <!-- coll sep, outer rad, adjust this -->
-    <constant name="PCOLL2_R3_U" value ="171.4"/> <!-- was 221, then 165.5 but still bad envelope"/> -->
-    <constant name="PCOLL2_R3_D" value ="171.4"/>
+    <constant name="PCOLL2_R3_U" value ="196.5"/> <!-- was 221, then 165.5 but still bad envelope"/>then settled on 171.4 but now improved -->
+    <constant name="PCOLL2_R3_D" value ="196.5"/>
     <constant name="PCOLL2_R4_U" value ="300"/>
     <constant name="PCOLL2_R4_D" value ="300"/>
     <constant name="PCOLL2_THICK" value ="150"/><!--100.0"/> increased the thickness by 50% to prevent punch through-->
@@ -274,7 +274,7 @@
     <constant name="PCOLL2_SCULPT_P3_Y" value ="27.2"/>
     <constant name="PCOLL2_SCULPT_P4_X" value ="163.9"/>
     <constant name="PCOLL2_SCULPT_P4_Y" value ="36.3"/>
-    -->
+    
     
     <constant name="PCOLL2_SCULPT_P1_X" value ="50.1"/>
     <constant name="PCOLL2_SCULPT_P1_Y" value ="10.5"/>
@@ -284,6 +284,18 @@
     <constant name="PCOLL2_SCULPT_P3_Y" value ="38"/>
     <constant name="PCOLL2_SCULPT_P4_X" value ="166.6"/>
     <constant name="PCOLL2_SCULPT_P4_Y" value ="36.5"/>
+-->
+<!-- New shifted target and shrunk experiment mode collimator 4 sculpt -->
+    <constant name="PCOLL2_SCULPT_P1_X" value ="53.3"/>
+    <constant name="PCOLL2_SCULPT_P1_Y" value ="10.3"/>
+    <constant name="PCOLL2_SCULPT_P2_X" value ="88.60"/>
+    <constant name="PCOLL2_SCULPT_P2_Y" value ="17.68"/>
+    <constant name="PCOLL2_SCULPT_P3_X" value ="123.25"/>
+    <constant name="PCOLL2_SCULPT_P3_Y" value ="28.48"/>
+    <constant name="PCOLL2_SCULPT_P4_X" value ="187.22"/>
+    <constant name="PCOLL2_SCULPT_P4_Y" value ="45.04"/>
+
+
 
 
     <position name="PCOLL2_lcut1" unit="mm" x="PCOLL2_SCULPT_P1_X" y="-PCOLL2_SCULPT_P1_Y" z="-PCOLL2_THICK/2-5"/> 
@@ -316,6 +328,8 @@
     <position name="PCOLL2_rcut12" unit="mm" x="20" y="70" z="PCOLL2_THICK/2+5"/> 
 
 
+
+<!--
     <constant name="COLL5_P1_X" value ="105.5"/>
     <constant name="COLL5_P1_Y" value ="8.5"/>
     <constant name="COLL5_P2_X" value ="178.0"/>
@@ -324,6 +338,16 @@
     <constant name="COLL5_P3_Y" value ="55.0"/>
     <constant name="COLL5_P4_X" value ="72"/>
     <constant name="COLL5_P4_Y" value ="13.0"/>
+-->
+    <constant name="COLL5_P1_X" value ="116.38"/>
+    <constant name="COLL5_P1_Y" value ="12.75"/>
+    <constant name="COLL5_P2_X" value ="180.22"/>
+    <constant name="COLL5_P2_Y" value ="29.15"/>
+    <constant name="COLL5_P3_X" value ="180.22"/>
+    <constant name="COLL5_P3_Y" value ="54.15"/>
+    <constant name="COLL5_P4_X" value ="74.22"/>
+    <constant name="COLL5_P4_Y" value ="18.25"/>
+
 
     <position name="COLL5_1" unit="mm" x="COLL5_P1_X" y="COLL5_P1_Y" z="-COLL5_THICK/2"/> 
     <position name="COLL5_2" unit="mm" x="COLL5_P2_X" y="COLL5_P2_Y" z="-COLL5_THICK/2"/> 
@@ -1842,19 +1866,19 @@
         <position name="beampipe_pos" unit="mm" z="17810+11140/2-DOFFSET"/>
       </physvol>
 -->         
-<!--
+ <!--- Collimator 5 -->
       <physvol name="DScoll_5">
         <volumeref ref="logicDScoll_5"/>
         <positionref ref="posCOLL5"/>
 	<rotationref ref="ARotateZ_0"/> 
       </physvol>
--->
-<!-- Collimator 4 
+
+<!--- Collimator 4 -->
       <physvol name="DScoll_6">
 	<volumeref ref="logicPDScollunion_1"/>
         <positionref ref="posPCOLL2"/>
       </physvol>
--->
+
 <!--pcoll2trap_phys is removed since this is overlapping with shblk 4 poly shielding -->
 <!--
 
