@@ -26,13 +26,15 @@
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
  <zplane rmin="96.8502" rmax="101.6" z="18699.41"/>
- <zplane rmin="96.8502" rmax="101.6" z="20000"/>
- <zplane rmin="96.8502" rmax="127.0" z="20000"/>
- <zplane rmin="120.65" rmax="127.0" z="20000"/>
- <zplane rmin="120.65" rmax="127.0" z="26000"/>
- <zplane rmin="120.65" rmax="152.4" z="26000"/>
- <zplane rmin="146.05" rmax="152.4" z="26000"/>
- <zplane rmin="146.05" rmax="152.4" z="29000"/>
+ <zplane rmin="96.8502" rmax="101.6" z="20000.0"/>
+ <zplane rmin="96.8502" rmax="127.0" z="20000.0"/>
+ <zplane rmin="96.8502" rmax="127.0" z="20006.35"/>
+ <zplane rmin="120.65" rmax="127.0" z="20006.35"/>
+ <zplane rmin="120.65" rmax="127.0" z="26000.0"/>
+ <zplane rmin="120.65" rmax="152.4" z="26000.0"/>
+ <zplane rmin="120.65" rmax="152.4" z="26006.35"/>
+ <zplane rmin="146.05" rmax="152.4" z="26006.35"/>
+ <zplane rmin="146.05" rmax="152.4" z="29000.0"/>
 </polycone>
 
 </solids>
