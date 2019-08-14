@@ -37,6 +37,20 @@
  <zplane rmin="146.05" rmax="152.4" z="29000.0"/>
 </polycone>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe_lead">
+ <zplane rmin="101.6" rmax="104.6" z="18699.41"/>
+ <zplane rmin="101.6" rmax="104.6" z="19997.0"/>
+ <zplane rmin="101.6" rmax="130.0" z="19997.0"/>
+ <zplane rmin="101.6" rmax="130.0" z="20000.0"/>
+ <zplane rmin="127.0" rmax="130.0" z="20000.0"/>
+ <zplane rmin="127.0" rmax="130.0" z="25997.0"/>
+ <zplane rmin="127.0" rmax="155.4" z="25997.0"/>
+ <zplane rmin="127.0" rmax="155.4" z="26000.0"/>
+ <zplane rmin="152.4" rmax="155.4" z="26000.0"/>
+ <zplane rmin="152.4" rmax="155.4" z="28997.0"/>
+</polycone>
+
+
 </solids>
 
   <structure>
@@ -48,6 +62,13 @@
         <auxiliary auxtype="DetNo" auxvalue="53"/>
      </volume>
 
+      <volume name="logicDbeampipe_lead">
+	<materialref ref="G4_Pb"/>
+        <solidref ref="solid_Dbeampipe_lead"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="56"/>
+     </volume>
+
     
     <volume name="logicMother">
       <materialref ref="Vacuum"/>
@@ -55,6 +76,11 @@
 
       <physvol name="Dbeampipe">
         <volumeref ref="logicDbeampipe"/>
+        <positionref ref="pipeCenter"/>
+      </physvol>
+
+       <physvol name="Dbeampipe_lead">
+        <volumeref ref="logicDbeampipe_lead"/>
         <positionref ref="pipeCenter"/>
       </physvol>
 

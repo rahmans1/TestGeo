@@ -1436,6 +1436,21 @@
  <zplane rmin="96.8502" rmax="101.6" z="18699.41-DOFFSET"/>
 </polycone>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe_lead">
+ <zplane rmin="76.2" rmax="79.2" z="15000.0-DOFFSET"/>
+ <zplane rmin="76.2" rmax="79.2" z="16997.0-DOFFSET"/>
+ <zplane rmin="76.2" rmax="104.6" z="16997.0-DOFFSET"/>
+ <zplane rmin="76.2" rmax="104.6" z="17000.0-DOFFSET"/>
+ <zplane rmin="101.6" rmax="104.6" z="17000.0-DOFFSET"/>
+ <zplane rmin="101.6" rmax="104.6" z="18699.41-DOFFSET"/>
+</polycone>
+
+
+
+
+
+
+
 </solids>
 
 <structure>
@@ -1740,6 +1755,14 @@
         <auxiliary auxtype="DetNo" auxvalue="52"/>
      </volume>
 
+
+     <volume name="logicDSbeampipe_lead">
+	<materialref ref="Lead"/>
+        <solidref ref="solid_DSbeampipe_lead"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="55"/>
+     </volume>
+
     <volume name="logicDownstream">
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeDownstream"/> -->
@@ -1752,6 +1775,12 @@
  
      <physvol name="DSbeampipe">
         <volumeref ref="logicDSbeampipe"/>
+        <positionref ref="CENTER"/>
+      </physvol>
+       
+      
+     <physvol name="DSbeampipe_lead">
+        <volumeref ref="logicDSbeampipe_lead"/>
         <positionref ref="CENTER"/>
       </physvol>
 
