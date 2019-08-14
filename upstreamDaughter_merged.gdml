@@ -725,6 +725,15 @@
  <zplane rmin="32.0" rmax="33.0" z="5750.0-UOFFSET"/>
 </polycone>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12_lead">
+ <zplane rmin="30.0" rmax="32.0" z="5675.0-UOFFSET"/>
+ <zplane rmin="30.0" rmax="32.0" z="5698.0-UOFFSET"/>
+ <zplane rmin="30.0" rmax="35.0" z="5698.0-UOFFSET"/>
+ <zplane rmin="30.0" rmax="35.0" z="5700.0-UOFFSET"/>
+ <zplane rmin="33.0" rmax="35.0" z="5700.0-UOFFSET"/>
+ <zplane rmin="33.0" rmax="35.0" z="5750.0-UOFFSET"/>
+</polycone>
+
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe">
  <zplane rmin="21.336" rmax="22.225" z="5900.0-UOFFSET"/>
@@ -750,6 +759,22 @@
  <zplane rmin="29.2735" rmax="30.1625" z="7800.889-UOFFSET"/>
  <zplane rmin="29.2735" rmax="30.1625" z="8025.0-UOFFSET"/>
 </polycone>
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_lead">
+ <zplane rmin="22.225" rmax="25.225" z="5900.0-UOFFSET"/>
+ <zplane rmin="22.225" rmax="25.225" z="6297.0-UOFFSET"/>
+ <zplane rmin="22.225" rmax="26.8125" z="6297.0-UOFFSET"/>
+ <zplane rmin="22.225" rmax="26.8125" z="6300.0-UOFFSET"/>
+ <zplane rmin="23.8125" rmax="26.8125" z="6300.0-UOFFSET"/>
+ <zplane rmin="23.8125" rmax="26.8125" z="6597.0-UOFFSET"/>
+ <zplane rmin="23.8125" rmax="28.4" z="6597.0-UOFFSET"/>
+ <zplane rmin="23.8125" rmax="28.4" z="6600.0-UOFFSET"/>
+ <zplane rmin="25.4" rmax="28.4" z="6600.0-UOFFSET"/>
+ <zplane rmin="25.4" rmax="28.4" z="7000.0-UOFFSET"/>
+</polycone>
+
+
+
 </solids>
 
 
@@ -934,6 +959,22 @@
         <auxiliary auxtype="DetNo" auxvalue="51"/>
      </volume>
 
+
+      <volume name="logicUSbeampipe_lead">
+	<materialref ref="Lead"/>
+        <solidref ref="solid_USbeampipe_lead"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="57"/>
+     </volume>
+    
+     <volume name="logicUSbeampipe_col12_lead">
+	<materialref ref="Lead"/>
+        <solidref ref="solid_USbeampipe_col12_lead"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="58"/>
+     </volume>
+
+
     <volume name="logicUpstream">
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeUpstream"/> -->
@@ -946,6 +987,17 @@
 
      <physvol name="USbeampipe">
         <volumeref ref="logicUSbeampipe"/>
+        <positionref ref="CENTER"/>
+      </physvol>
+
+
+     <physvol name="USbeampipe_col12_lead">
+        <volumeref ref="logicUSbeampipe_col12_lead"/>
+        <positionref ref="CENTER"/>
+      </physvol>
+
+     <physvol name="USbeampipe_lead">
+        <volumeref ref="logicUSbeampipe_lead"/>
         <positionref ref="CENTER"/>
       </physvol>
 
