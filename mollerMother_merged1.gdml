@@ -24,6 +24,10 @@
 <solids>
      <box lunit="mm" name="boxMother" x="200000" y="200000" z="200000"/>
 
+
+<cone name="solidCollar2" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="732" rmax1="750" rmin2="732" rmax2="750" z="100"/>
+<cone name="solidCollar3" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="928" rmax1="980" rmin2="928" rmax2="980" z="100"/>
+
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
  <zplane rmin="96.8502" rmax="101.6" z="18699.41"/>
  <zplane rmin="96.8502" rmax="101.6" z="20000.0"/>
@@ -68,7 +72,18 @@
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="56"/>
      </volume>
+    
+      <volume name="logicCollar2">
+	<materialref ref="G4_Pb"/>
+	<solidref ref="solidCollar2"/>
+     </volume>
 
+     <volume name="logicCollar3">
+	<materialref ref="G4_Pb"/>
+	<solidref ref="solidCollar3"/>
+     </volume>
+     
+     
     
     <volume name="logicMother">
       <materialref ref="Vacuum"/>
@@ -82,6 +97,17 @@
        <physvol name="Dbeampipe_lead">
         <volumeref ref="logicDbeampipe_lead"/>
         <positionref ref="pipeCenter"/>
+      </physvol>
+
+      <physvol name="collar2">
+ 	<volumeref ref="logicCollar2"/>
+ 	<position lunit="mm" name="collar2pos" x="0" y="0" z="19550"/>
+ 	<rotation aunit="rad" name="collar2rot" x="0" y="0" z="0"/>
+      </physvol>
+      <physvol name="collar3">
+ 	<volumeref ref="logicCollar3"/>
+ 	<position lunit="mm" name="collar3pos" x="0" y="0" z="23550"/>
+ 	<rotation aunit="rad" name="collar3rot" x="0" y="0" z="0"/>
       </physvol>
 
       <physvol>
