@@ -1744,7 +1744,7 @@
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeDownstream"/> -->
      <solidref ref="boxDownstream_1"/> 
-      
+     <!-- 
       <physvol name="DSbeampipe_col4">
         <volumeref ref="logicDSbeampipe_col4"/>
         <positionref ref="CENTER"/>
@@ -1754,7 +1754,7 @@
         <volumeref ref="logicDSbeampipe"/>
         <positionref ref="CENTER"/>
       </physvol>
-
+-->
 <!-- Old beampipe design not in use now -->
 <!-- 
       <physvol>

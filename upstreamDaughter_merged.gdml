@@ -938,7 +938,7 @@
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeUpstream"/> -->
       <solidref ref="boxUpstream"/>
-
+<!--
      <physvol name="USbeampipe_col12">
         <volumeref ref="logicUSbeampipe_col12"/>
         <positionref ref="CENTER"/>
@@ -948,7 +948,7 @@
         <volumeref ref="logicUSbeampipe"/>
         <positionref ref="CENTER"/>
       </physvol>
-
+-->
 
       <physvol name="UScoll_1">
         <volumeref ref="logicUScoll_1"/>
