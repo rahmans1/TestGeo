@@ -248,7 +248,7 @@
     <!--CAD based shielding beampipe for col-1 to end of US magnet -->
     <constant name="shield_US_beampipe_length" value="1945"/>
     <constant name="shield_US_beampipe_thickness" value="3"/>
-    <constant name="shield_US_beampipe_US_rmin" value="26.5"/>  <!--25.5"/>-->
+    <constant name="shield_US_beampipe_US_rmin" value="25.5"/>  <!--25.5"/>-->
     <constant name="shield_US_beampipe_DS_rmin" value="31"/>
     <constant name="shield_US_beampipe_US_rmax" value="shield_US_beampipe_US_rmin+shield_US_beampipe_thickness"/>
     <constant name="shield_US_beampipe_DS_rmax" value="shield_US_beampipe_DS_rmin+shield_US_beampipe_thickness"/>
@@ -1068,12 +1068,11 @@
         <positionref ref="beampipe_3_center"/>
       </physvol>
 -->
-<!-- Commenting out beamshield-
+
       <physvol>
         <volumeref ref="shield_US_beampipe_1_logic"/>
         <positionref ref="shield_US_beampipe_center"/>
       </physvol>
--->
    </volume>
 </structure>
 
