@@ -54,15 +54,15 @@
     <!-- Bore from front till 400 mm will be inverse tapered as the initial design and rings will substracted accordingly after bore is created with this dimensions -->
     <constant name="COLL1_sub_R_U" value ="COLL1_R1_U"/>
     <constant name="COLL1_sub_R_D" value ="COLL1_Ring4_R_U"/>
-    <constant name="COLL1_sub_Length" value ="400.0"/>
+    <constant name="COLL1_sub_Length" value ="500.0"/>
 
     <!--Remove/leave space from outer radius of merged col-1 for water cooling  -->
     <constant name="COLL1_remove_Ring1_DeltaR" value ="3.0"/>
     <constant name="COLL1_remove_Ring1_Length" value ="100.0"/>
     <constant name="COLL1_remove_Ring2_DeltaR" value ="5.0"/>
-    <constant name="COLL1_remove_Ring2_Length" value ="300.0"/>
+    <constant name="COLL1_remove_Ring2_Length" value ="400.0"/>
 
-    <constant name="COLL1_THICK" value ="500.0"/>
+    <constant name="COLL1_THICK" value ="600.0"/>
 
     <!--Fins for col-1 -->
     <constant name="col1fin_DeltaR" value ="25.0"/>
@@ -938,12 +938,12 @@
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeUpstream"/> -->
       <solidref ref="boxUpstream"/>
-
+<!--
      <physvol name="USbeampipe_col12">
         <volumeref ref="logicUSbeampipe_col12"/>
         <positionref ref="CENTER"/>
       </physvol>
-
+-->
      <physvol name="USbeampipe">
         <volumeref ref="logicUSbeampipe"/>
         <positionref ref="CENTER"/>
