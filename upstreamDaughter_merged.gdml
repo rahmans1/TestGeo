@@ -18,7 +18,7 @@
     <!-- Col-1 is now conical with bore and surface with same angles as inner and outer angles at the upstream face  -->
     <!--Add an offset to move the merged col-1 US-->
     <constant name="MERGE_OFFSET" value="150.00"/>
-    <constant name="COLL1_z" value ="5575 - UOFFSET - MERGE_OFFSET"/>
+    <constant name="COLL1_z" value ="5575 - UOFFSET - MERGE_OFFSET+225/2"/>
     <position name="posCOLL1" unit="mm" x="0" y="0" z="COLL1_z"/>
     <!--Col-1 std. Radii -->
     <!--
@@ -50,19 +50,19 @@
     <!--Exit 10 cm of the col-1 will be conical bore cylinder to restrict 0.1596 deg therefore use this to first subtract col-l bore this done by setting COLL1_R1_D to DS radius-->
     <constant name="COLL1_Ring4_R_U" value ="13.629"/><!--"15.529"/>-->
     <constant name="COLL1_Ring4_R_D" value ="COLL1_R1_D"/>
-    <constant name="COLL1_Ring4_Length" value ="100.0"/>
+    <constant name="COLL1_Ring4_Length" value ="325.0"/>
     <!-- Bore from front till 400 mm will be inverse tapered as the initial design and rings will substracted accordingly after bore is created with this dimensions -->
     <constant name="COLL1_sub_R_U" value ="COLL1_R1_U"/>
     <constant name="COLL1_sub_R_D" value ="COLL1_Ring4_R_U"/>
-    <constant name="COLL1_sub_Length" value ="500.0"/>
+    <constant name="COLL1_sub_Length" value ="400.0"/>
 
     <!--Remove/leave space from outer radius of merged col-1 for water cooling  -->
     <constant name="COLL1_remove_Ring1_DeltaR" value ="3.0"/>
     <constant name="COLL1_remove_Ring1_Length" value ="100.0"/>
     <constant name="COLL1_remove_Ring2_DeltaR" value ="5.0"/>
-    <constant name="COLL1_remove_Ring2_Length" value ="400.0"/>
+    <constant name="COLL1_remove_Ring2_Length" value ="525.0"/>
 
-    <constant name="COLL1_THICK" value ="600.0"/>
+    <constant name="COLL1_THICK" value ="725.0"/>
 
     <!--Fins for col-1 -->
     <constant name="col1fin_DeltaR" value ="25.0"/>
@@ -94,8 +94,8 @@
     <!-- main coll, adjust this -->
     <position name="posCOLL2" unit="mm" x="0" y="0" z="5925-UOFFSET-50/2-75"/> <!--subtracting 50/2 from z to compensate for increased thickness so that downstream end still ends at the same point as before. Walking up collimator by 75 mmm-->
     <!--Shielding beam pipe overlap with col-2 so I increased to bore radius in col-2 from 26.0 to 29.55 -->
-    <constant name="COLL2_R1_U" value ="21.336"/>   <!--29.55"/>-->
-    <constant name="COLL2_R1_D" value ="21.336"/>   <!--29.55"/>-->
+    <constant name="COLL2_R1_U" value ="31.703-5"/>   <!--29.55"/>-->
+    <constant name="COLL2_R1_D" value ="31.703-5"/>   <!--29.55"/>-->
     <!-- coll sep, inner rad, adjust this -->
     <constant name="COLL2_R2_U" value ="35"/><!--"v6=40,v5=31 v4=38, v3=40, v2=45.19"/>--><!--"v1=36.15"/>-->
     <constant name="COLL2_R2_D" value ="35"/><!--"36.15"/>-->
