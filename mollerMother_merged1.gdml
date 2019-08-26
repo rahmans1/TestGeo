@@ -42,7 +42,7 @@
   <structure>
 
      <volume name="logicDbeampipe">
-	<materialref ref="G4_Al"/>
+	<materialref ref="G4_W"/>
         <solidref ref="solid_Dbeampipe"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="53"/>

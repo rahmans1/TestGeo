@@ -1727,14 +1727,14 @@
 
 
      <volume name="logicDSbeampipe_col4">
-	<materialref ref="Aluminum"/>
+	<materialref ref="G4_W"/>
         <solidref ref="solid_DSbeampipe_col4"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="54"/>
      </volume>
 
     <volume name="logicDSbeampipe">
-	<materialref ref="Aluminum"/>
+	<materialref ref="G4_W"/>
         <solidref ref="solid_DSbeampipe"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="52"/>

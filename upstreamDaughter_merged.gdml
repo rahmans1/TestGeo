@@ -921,14 +921,14 @@
     </volume>
 
      <volume name="logicUSbeampipe_col12">
-	<materialref ref="Aluminum"/>
+	<materialref ref="G4_W"/>
         <solidref ref="solid_USbeampipe_col12"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="50"/>
      </volume>
 
      <volume name="logicUSbeampipe">
-	<materialref ref="Aluminum"/>
+	<materialref ref="G4_W"/>
         <solidref ref="solid_USbeampipe"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="51"/>
