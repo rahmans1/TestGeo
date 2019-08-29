@@ -241,7 +241,7 @@
     <constant name="AlCan_conflict_reduction" value="800"/>
     <constant name="AlCan_length" value="8574.02-AlCan_conflict_reduction"/> <!-- 1000mm length decrease to avoid conflicts -->
     <constant name="AlCan_width" value="2844.8"/>
-    <constant name="AlCan_height" value="3251.2"/>
+    <constant name="AlCan_height" value="3251.2"/>s
     <constant name="AlCan_US_Opening_Bore_R" value="508/2"/>
     <constant name="AlCan_DS_Opening_Bore_R" value="1219.2/2"/>
     <constant name="AlCan_opening_sub_length" value="25.4 + 1.0"/>
@@ -1366,40 +1366,16 @@
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe_col4">
- <zplane rmin="29.2735" rmax="30.1625" z="8025.0-DOFFSET"/>
- <zplane rmin="29.2735" rmax="30.1625" z="8100.0-DOFFSET"/>
- <zplane rmin="29.2735" rmax="31.75" z="8100.0-DOFFSET"/>
- <zplane rmin="29.2735" rmax="31.75" z="8100.889-DOFFSET"/>
- <zplane rmin="30.861" rmax="31.75" z="8100.889-DOFFSET"/>
- <zplane rmin="30.861" rmax="31.75" z="8225.0-DOFFSET"/>
+ <zplane rmin="31" rmax="32" z="8025.0-DOFFSET"/>
+ <zplane rmin="31" rmax="32" z="8225.0-DOFFSET"/>
 </polycone>
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe">
- <zplane rmin="30.861" rmax="31.75" z="8375-DOFFSET"/>
- <zplane rmin="30.861" rmax="31.75" z="8400.0-DOFFSET"/>
- <zplane rmin="30.861" rmax="34.925" z="8400.0-DOFFSET"/>
- <zplane rmin="30.861" rmax="34.925" z="8401.651-DOFFSET"/>
- <zplane rmin="33.274" rmax="34.925" z="8401.651-DOFFSET"/>
- <zplane rmin="33.274" rmax="34.925" z="10000.0-DOFFSET"/>
- <zplane rmin="33.274" rmax="36.5125" z="10000.0-DOFFSET"/>
- <zplane rmin="33.274" rmax="36.5125" z="10001.651-DOFFSET"/>
- <zplane rmin="34.8615" rmax="36.5125" z="10001.651-DOFFSET"/>
- <zplane rmin="34.8615" rmax="36.5125" z="10500.0-DOFFSET"/>
- <zplane rmin="34.8615" rmax="38.1" z="10500.0-DOFFSET"/>
- <zplane rmin="34.8615" rmax="38.1" z="10501.651-DOFFSET"/>
- <zplane rmin="36.449" rmax="38.1" z="10501.651-DOFFSET"/>
- <zplane rmin="36.449" rmax="38.1" z="10900.0-DOFFSET"/>
- <zplane rmin="36.449" rmax="39.6875" z="10900.0-DOFFSET"/>
- <zplane rmin="36.449" rmax="39.6875" z="10901.651-DOFFSET"/>
- <zplane rmin="38.0365" rmax="39.6875" z="10901.651-DOFFSET"/>
- <zplane rmin="38.0365" rmax="39.6875" z="11400.0-DOFFSET"/>
- <zplane rmin="38.0365" rmax="41.275" z="11400.0-DOFFSET"/>
- <zplane rmin="38.0365" rmax="41.275" z="11401.651-DOFFSET"/>
- <zplane rmin="39.624" rmax="41.275" z="11401.651-DOFFSET"/>
- <zplane rmin="39.624" rmax="41.275" z="11900.0-DOFFSET"/>
- <zplane rmin="39.624" rmax="42.8625" z="11900.0-DOFFSET"/>
- <zplane rmin="39.624" rmax="42.8625" z="11901.651-DOFFSET"/>
+ <zplane rmin="36.6" rmax="39.6" z="11850.01-DOFFSET"/>
+ <zplane rmin="36.6" rmax="39.6" z="11900-DOFFSET"/>
+ <zplane rmin="36.6" rmax="42.8625" z="11900.0-DOFFSET"/>
+ <zplane rmin="36.6" rmax="42.8625" z="11901.651-DOFFSET"/>
  <zplane rmin="41.2115" rmax="42.8625" z="11901.651-DOFFSET"/>
  <zplane rmin="41.2115" rmax="42.8625" z="12300.0-DOFFSET"/>
  <zplane rmin="41.2115" rmax="44.45" z="12300.0-DOFFSET"/>
@@ -1744,7 +1720,7 @@
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeDownstream"/> -->
      <solidref ref="boxDownstream_1"/> 
-     <!-- 
+  
       <physvol name="DSbeampipe_col4">
         <volumeref ref="logicDSbeampipe_col4"/>
         <positionref ref="CENTER"/>
@@ -1754,7 +1730,7 @@
         <volumeref ref="logicDSbeampipe"/>
         <positionref ref="CENTER"/>
       </physvol>
--->
+
 <!-- Old beampipe design not in use now -->
 <!-- 
       <physvol>
