@@ -1698,7 +1698,9 @@
       <materialref ref="Tungsten"/>
       <solidref ref="shield_DS_beampipe_solid"/>
       <auxiliary auxtype="Color" auxvalue="blue"/>
-    </volume>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
+      <auxiliary auxtype="DetNo" auxvalue="56"/> 
+   </volume>
 
 
 

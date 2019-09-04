@@ -52,12 +52,12 @@
     <volume name="logicMother">
       <materialref ref="Vacuum"/>
       <solidref ref="boxMother"/>
-<!--
+
       <physvol name="Dbeampipe">
         <volumeref ref="logicDbeampipe"/>
         <positionref ref="pipeCenter"/>
       </physvol>
--->
+
       <physvol>
       <file name="/home/rahmans/geometry/geometry_optics_beam/targetDaughter_merged1.gdml"/>
       <positionref ref="targetCenter"/>
