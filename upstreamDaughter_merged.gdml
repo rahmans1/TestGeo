@@ -717,18 +717,18 @@
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12">
- <zplane rmin="26.703" rmax="29.703" z="5675.0-UOFFSET"/>
- <zplane rmin="26.703" rmax="29.703" z="5700.0-UOFFSET"/>
- <zplane rmin="26.703" rmax="35.0" z="5700.0-UOFFSET"/>
- <zplane rmin="26.703" rmax="35.0" z="5703.0-UOFFSET"/>
- <zplane rmin="32.0" rmax="35.0" z="5703.0-UOFFSET"/>
- <zplane rmin="32.0" rmax="35.0" z="5750.0-UOFFSET"/>
+ <zplane rmin="26.703" rmax="28.803" z="5675.0-UOFFSET"/>
+ <zplane rmin="26.703" rmax="28.803" z="5700.0-UOFFSET"/>
+ <zplane rmin="26.703" rmax="34.1" z="5700.0-UOFFSET"/>
+ <zplane rmin="26.703" rmax="34.1" z="5702.1-UOFFSET"/>
+ <zplane rmin="32.0" rmax="34.1" z="5702.1-UOFFSET"/>
+ <zplane rmin="32.0" rmax="34.1" z="5750.0-UOFFSET"/>
 </polycone>
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe">
- <zplane rmin="31" rmax="32" z="7845.001-UOFFSET"/>
- <zplane rmin="31" rmax="32" z="8025.0-UOFFSET"/>
+ <zplane rmin="31" rmax="31.7" z="7845.001-UOFFSET"/>
+ <zplane rmin="31" rmax="31.7" z="8025.0-UOFFSET"/>
 </polycone>
 </solids>
 
