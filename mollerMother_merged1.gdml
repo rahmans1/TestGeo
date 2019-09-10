@@ -25,16 +25,16 @@
      <box lunit="mm" name="boxMother" x="200000" y="200000" z="200000"/>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
- <zplane rmin="96.8502" rmax="100.1751" z="18699.41"/>
- <zplane rmin="96.8502" rmax="100.1751" z="20000.0"/>
- <zplane rmin="96.8502" rmax="125.095" z="20000.0"/>
- <zplane rmin="96.8502" rmax="125.095" z="20004.445"/>
- <zplane rmin="120.65" rmax="125.095" z="20004.445"/>
- <zplane rmin="120.65" rmax="125.095" z="26000.0"/>
- <zplane rmin="120.65" rmax="150.495" z="26000.0"/>
- <zplane rmin="120.65" rmax="150.495" z="26004.445"/>
- <zplane rmin="146.05" rmax="150.495" z="26004.445"/>
- <zplane rmin="146.05" rmax="150.495" z="29000.0"/>
+ <zplane rmin="96.8502" rmax="98.75012" z="18699.41"/>
+ <zplane rmin="96.8502" rmax="98.75012" z="20000.0"/>
+ <zplane rmin="96.8502" rmax="123.19" z="20000.0"/>
+ <zplane rmin="96.8502" rmax="123.19" z="20002.54"/>
+ <zplane rmin="120.65" rmax="123.19" z="20002.54"/>
+ <zplane rmin="120.65" rmax="123.19" z="26000.0"/>
+ <zplane rmin="120.65" rmax="148.59" z="26000.0"/>
+ <zplane rmin="120.65" rmax="148.59" z="26002.54"/>
+ <zplane rmin="146.05" rmax="148.59" z="26002.54"/>
+ <zplane rmin="146.05" rmax="148.59" z="29000.0"/>
 </polycone>
 
 </solids>
