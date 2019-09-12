@@ -1366,50 +1366,50 @@
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe_col4">
- <zplane rmin="31" rmax="31.1" z="8025.0-DOFFSET"/>
- <zplane rmin="31" rmax="31.1" z="8225.0-DOFFSET"/>
+ <zplane rmin="31" rmax="31.25236" z="8025.0-DOFFSET"/>
+ <zplane rmin="31" rmax="31.25236" z="8225.0-DOFFSET"/>
 </polycone>
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe">
- <zplane rmin="36.6" rmax="36.9" z="11850.01-DOFFSET"/>
- <zplane rmin="36.6" rmax="36.9" z="11900-DOFFSET"/>
- <zplane rmin="36.6" rmax="41.3766" z="11900.0-DOFFSET"/>
- <zplane rmin="36.6" rmax="41.3766" z="11900.1651-DOFFSET"/>
- <zplane rmin="41.2115" rmax="41.3766" z="11900.1651-DOFFSET"/>
- <zplane rmin="41.2115" rmax="41.3766" z="12300.0-DOFFSET"/>
- <zplane rmin="41.2115" rmax="42.9641" z="12300.0-DOFFSET"/>
- <zplane rmin="41.2115" rmax="42.9641" z="12300.1651-DOFFSET"/>
- <zplane rmin="42.799" rmax="42.9641" z="12300.1651-DOFFSET"/>
- <zplane rmin="42.799" rmax="42.9641" z="12700.0-DOFFSET"/>
- <zplane rmin="42.799" rmax="44.5516" z="12700.0-DOFFSET"/>
- <zplane rmin="42.799" rmax="44.5516" z="12700.1651-DOFFSET"/>
- <zplane rmin="44.3865" rmax="44.5516" z="12700.1651-DOFFSET"/>
- <zplane rmin="44.3865" rmax="44.5516" z="13200.0-DOFFSET"/>
- <zplane rmin="44.3865" rmax="46.1391" z="13200.0-DOFFSET"/>
- <zplane rmin="44.3865" rmax="46.1391" z="13200.1651-DOFFSET"/>
- <zplane rmin="45.974" rmax="46.1391" z="13200.1651-DOFFSET"/>
- <zplane rmin="45.974" rmax="46.1391" z="13600.0-DOFFSET"/>
- <zplane rmin="45.974" rmax="49.3141" z="13600.0-DOFFSET"/>
- <zplane rmin="45.974" rmax="49.3141" z="13600.1651-DOFFSET"/>
- <zplane rmin="49.149" rmax="49.3141" z="13600.1651-DOFFSET"/>
- <zplane rmin="49.149" rmax="49.3141" z="13800.0-DOFFSET"/>
- <zplane rmin="49.149" rmax="55.25262" z="13800.0-DOFFSET"/>
- <zplane rmin="49.149" rmax="55.25262" z="13800.21082-DOFFSET"/>
- <zplane rmin="55.0418" rmax="55.25262" z="13800.21082-DOFFSET"/>
- <zplane rmin="55.0418" rmax="55.25262" z="14250.0-DOFFSET"/>
- <zplane rmin="55.0418" rmax="61.60262" z="14250.0-DOFFSET"/>
- <zplane rmin="55.0418" rmax="61.60262" z="14250.21082-DOFFSET"/>
- <zplane rmin="61.3918" rmax="61.60262" z="14250.21082-DOFFSET"/>
- <zplane rmin="61.3918" rmax="61.60262" z="15000.0-DOFFSET"/>
- <zplane rmin="61.3918" rmax="73.4568" z="15000.0-DOFFSET"/>
- <zplane rmin="61.3918" rmax="73.4568" z="15000.3048-DOFFSET"/>
- <zplane rmin="73.152" rmax="73.4568" z="15000.3048-DOFFSET"/>
- <zplane rmin="73.152" rmax="73.4568" z="17000.0-DOFFSET"/>
- <zplane rmin="73.152" rmax="97.32518" z="17000.0-DOFFSET"/>
- <zplane rmin="73.152" rmax="97.32518" z="17000.47498-DOFFSET"/>
- <zplane rmin="96.8502" rmax="97.32518" z="17000.47498-DOFFSET"/>
- <zplane rmin="96.8502" rmax="97.32518" z="18699.41-DOFFSET"/>
+ <zplane rmin="36.6" rmax="37.35708" z="11850.01-DOFFSET"/>
+ <zplane rmin="36.6" rmax="37.35708" z="11900-DOFFSET"/>
+ <zplane rmin="36.6" rmax="41.62815" z="11900.0-DOFFSET"/>
+ <zplane rmin="36.6" rmax="41.62815" z="11900.41665-DOFFSET"/>
+ <zplane rmin="41.2115" rmax="41.62815" z="11900.41665-DOFFSET"/>
+ <zplane rmin="41.2115" rmax="41.62815" z="12300.0-DOFFSET"/>
+ <zplane rmin="41.2115" rmax="43.21565" z="12300.0-DOFFSET"/>
+ <zplane rmin="41.2115" rmax="43.21565" z="12300.41665-DOFFSET"/>
+ <zplane rmin="42.799" rmax="43.21565" z="12300.41665-DOFFSET"/>
+ <zplane rmin="42.799" rmax="43.21565" z="12700.0-DOFFSET"/>
+ <zplane rmin="42.799" rmax="44.80315" z="12700.0-DOFFSET"/>
+ <zplane rmin="42.799" rmax="44.80315" z="12700.41665-DOFFSET"/>
+ <zplane rmin="44.3865" rmax="44.80315" z="12700.41665-DOFFSET"/>
+ <zplane rmin="44.3865" rmax="44.80315" z="13200.0-DOFFSET"/>
+ <zplane rmin="44.3865" rmax="46.39065" z="13200.0-DOFFSET"/>
+ <zplane rmin="44.3865" rmax="46.39065" z="13200.41665-DOFFSET"/>
+ <zplane rmin="45.974" rmax="46.39065" z="13200.41665-DOFFSET"/>
+ <zplane rmin="45.974" rmax="46.39065" z="13600.0-DOFFSET"/>
+ <zplane rmin="45.974" rmax="49.56565" z="13600.0-DOFFSET"/>
+ <zplane rmin="45.974" rmax="49.56565" z="13600.41665-DOFFSET"/>
+ <zplane rmin="49.149" rmax="49.56565" z="13600.41665-DOFFSET"/>
+ <zplane rmin="49.149" rmax="49.56565" z="13800.0-DOFFSET"/>
+ <zplane rmin="49.149" rmax="55.57382" z="13800.0-DOFFSET"/>
+ <zplane rmin="49.149" rmax="55.57382" z="13800.53202-DOFFSET"/>
+ <zplane rmin="55.0418" rmax="55.57382" z="13800.53202-DOFFSET"/>
+ <zplane rmin="55.0418" rmax="55.57382" z="14250.0-DOFFSET"/>
+ <zplane rmin="55.0418" rmax="61.92382" z="14250.0-DOFFSET"/>
+ <zplane rmin="55.0418" rmax="61.92382" z="14250.53202-DOFFSET"/>
+ <zplane rmin="61.3918" rmax="61.92382" z="14250.53202-DOFFSET"/>
+ <zplane rmin="61.3918" rmax="61.92382" z="15000.0-DOFFSET"/>
+ <zplane rmin="61.3918" rmax="73.92119" z="15000.0-DOFFSET"/>
+ <zplane rmin="61.3918" rmax="73.92119" z="15000.76919-DOFFSET"/>
+ <zplane rmin="73.152" rmax="73.92119" z="15000.76919-DOFFSET"/>
+ <zplane rmin="73.152" rmax="73.92119" z="17000.0-DOFFSET"/>
+ <zplane rmin="73.152" rmax="98.04886" z="17000.0-DOFFSET"/>
+ <zplane rmin="73.152" rmax="98.04886" z="17001.19866-DOFFSET"/>
+ <zplane rmin="96.8502" rmax="98.04886" z="17001.19866-DOFFSET"/>
+ <zplane rmin="96.8502" rmax="98.04886" z="18699.41-DOFFSET"/>
 </polycone>
 
 </solids>
