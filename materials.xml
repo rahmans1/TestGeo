@@ -253,8 +253,7 @@
       <atom unit="g/mole" value="26.981"/>
    </material>
 
-
-<!--Better definition would be to start from isotopes and build natural lead -->
+  <!-- Better definition would be to start from isotopes and build natural lead -->
     <material Z="82" name="Lead" state="solid">
       <MEE unit="eV" value="823"/>
       <D unit="g/cm3" value="11.35"/>
@@ -434,6 +433,45 @@
     <atom unit="g/mole" value="18"/>
   </material>    
   -->
+
+
+<!--
+  <material name="Mumetal" state="solid">
+      <D unit="g/cm3" value="8.7"/>
+      <fraction n=0.8 ref="Nickel"/>
+      <fraction n=0.04 ref="Molybdenum"/>
+      <fraction n=0.007 ref="Manganese"/>
+      <fraction n=0.005 ref="Silicon"/>
+      <fraction n=0.004 ref="Cobalt"/>
+      <fraction n=0.002 ref="Copper"/>
+      <fraction n=0.002 ref="Chromium"/>
+      <fraction n=0.0002 ref="Phosphorus"/>
+      <fraction n=0.0001 ref="Sulfur"/>
+      <fraction n=0.0005 ref="Carbon"/>
+      <fraction n=0.1392 ref="Iron"/>
+   </material>
+-->
+
+
+<material name="Mumetal" state="solid">
+      <D unit="g/cm3" value="8.7"/>
+      <fraction n="0.8" ref="G4_Ni"/>
+      <fraction n="0.04" ref="G4_Mo"/>
+      <fraction n="0.007" ref="G4_Mn"/>
+      <fraction n="0.005" ref="G4_Si"/>
+      <fraction n="0.004" ref="G4_Co"/>
+      <fraction n="0.002" ref="G4_Cu"/>
+      <fraction n="0.002" ref="G4_Cr"/>
+      <fraction n="0.0002" ref="G4_P"/>
+      <fraction n="0.0001" ref="G4_S"/>
+      <fraction n="0.0005" ref="G4_C"/>
+      <fraction n="0.1392" ref="G4_Fe"/>
+</material>
+
+
+
+
+
 
 
 </materials>

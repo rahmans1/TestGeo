@@ -246,6 +246,7 @@
     <position name="beampipe_3_center" unit="mm" x="0" y="0" z="COLL1_z + COLL1_THICK/2 + 1"/>
 
     <!--CAD based shielding beampipe for col-1 to end of US magnet -->
+    <constant name="mushield_US_beampipe_thickness" value="1"/>
     <constant name="shield_US_beampipe_length" value="1945"/>
     <constant name="shield_US_beampipe_thickness" value="3"/>
     <constant name="shield_US_beampipe_US_rmin" value="25.5"/>  <!--25.5"/>-->
@@ -344,6 +345,9 @@
 
     <!-- inner photon collimating beampipe near collimator 1 -->
     <cone aunit="deg" deltaphi="360" lunit="mm" name="solid_shield_US_beampipe_1" rmax1="shield_US_beampipe_US_rmax" rmax2="shield_US_beampipe_DS_rmax" rmin1="shield_US_beampipe_US_rmin" rmin2="shield_US_beampipe_DS_rmin" startphi="0" z="shield_US_beampipe_length"/>
+
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="solid_mushield_US_beampipe_1" rmax1="shield_US_beampipe_US_rmax+mushield_US_beampipe_thickness" rmax2="shield_US_beampipe_DS_rmax+mushield_US_beampipe_thickness" rmin1="shield_US_beampipe_US_rmax" rmin2="shield_US_beampipe_DS_rmax" startphi="0" z="shield_US_beampipe_length"/>
+
 
     <!-- New merged col-1 -->
     <!--R max will be same as before, I'm starting with bore radius of the exit bore for whole col-1 and then subtract appropriately -->
@@ -730,6 +734,15 @@
  <zplane rmin="31" rmax="32" z="7845.001-UOFFSET"/>
  <zplane rmin="31" rmax="32" z="8025.0-UOFFSET"/>
 </polycone>
+
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USmubeampipe">^M
+ <zplane rmin="32" rmax="35" z="7845.001-UOFFSET"/>
+ <zplane rmin="32" rmax="35" z="7846.001-UOFFSET"/>
+ <zplane rmin="32" rmax="32+mushield_US_beampipe_thickness" z="7846.001-UOFFSET"/>
+ <zplane rmin="32" rmax="32+mushield_US_beampipe_thickness" z="8025.0-UOFFSET"/>^M
+</polycone>
+
 </solids>
 
 
@@ -902,12 +915,28 @@
       <auxiliary auxtype="DetNo" auxvalue="55"/>^
     </volume>
 
+    <volume name="mushield_US_beampipe_1_logic">
+      <materialref ref="Mumetal"/>
+      <solidref ref="solid_mushield_US_beampipe_1"/>
+      <auxiliary auxtype="Color" auxvalue="red"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="57"/>
+    </volume>
+
      <volume name="logicUSbeampipe_col12">
 	<materialref ref="Aluminum"/>
         <solidref ref="solid_USbeampipe_col12"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="50"/>
      </volume>
+
+
+     <volume name="logicUSmubeampipe">
+         <materialref ref="Mumetal"/>
+         <solidref ref="solid_USmubeampipe"/>
+         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
+         <auxiliary auxtype="DetNo" auxvalue="58"/>
+      </volume>^ 
 
      <volume name="logicUSbeampipe">
 	<materialref ref="Aluminum"/>
@@ -929,6 +958,11 @@
      <physvol name="USbeampipe">
         <volumeref ref="logicUSbeampipe"/>
         <positionref ref="CENTER"/>
+      </physvol>
+
+      <physvol name="USmubeampipe">
+         <volumeref ref="logicUSmubeampipe"/>
+         <positionref ref="CENTER"/>
       </physvol>
 
 
@@ -1050,6 +1084,12 @@
         <positionref ref="beampipe_3_center"/>
       </physvol>
 -->
+
+
+      <physvol>
+        <volumeref ref="mushield_US_beampipe_1_logic"/>
+        <positionref ref="shield_US_beampipe_center"/>
+      </physvol>
 
       <physvol>
         <volumeref ref="shield_US_beampipe_1_logic"/>
