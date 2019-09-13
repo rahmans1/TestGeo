@@ -738,8 +738,8 @@
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USmubeampipe">^M
  <zplane rmin="32" rmax="35" z="7845.001-UOFFSET"/>
- <zplane rmin="32" rmax="35" z="7846.001-UOFFSET"/>
- <zplane rmin="32" rmax="32+mushield_US_beampipe_thickness" z="7846.001-UOFFSET"/>
+ <zplane rmin="32" rmax="35" z="7845.001+mushield_US_beampipe_thickness-UOFFSET"/>
+ <zplane rmin="32" rmax="32+mushield_US_beampipe_thickness" z="7845.001+mushield_US_beampipe_thickness-UOFFSET"/>
  <zplane rmin="32" rmax="32+mushield_US_beampipe_thickness" z="8025.0-UOFFSET"/>^M
 </polycone>
 

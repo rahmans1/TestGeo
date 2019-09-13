@@ -214,6 +214,7 @@
     <!--End of old prototype beam pipe-->
 
     <!--CAD based shielding beampipe for col-4 to end of hybrid magnet -->
+    <constant name="mushield_DS_beampipe_thickness" value="1"/>
     <constant name="shield_DS_beampipe_p1_length" value="125 + col4shift"/> <!-- FIXME Added length to col 4's beampipe in an arbitrary way!! FIXME -->
     <constant name="shield_DS_beampipe_thickness" value="3"/>
     <constant name="shield_DS_beampipe_p1_US_rmin" value="33"/>
@@ -1060,6 +1061,19 @@
       <zplane rmin="shield_DS_beampipe_p3_DS_rmin" rmax="shield_DS_beampipe_p3_DS_rmax" z="shield_DS_beampipe_p1_length + 0.01 + shield_DS_beampipe_p2_length + shield_DS_beampipe_p3_length"/>
     </polycone>
 
+
+     <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="mushield_DS_beampipe_solid"> 
+      <zplane rmin="shield_DS_beampipe_p1_US_rmax" rmax="shield_DS_beampipe_p1_US_rmax+mushield_DS_beampipe_thickness" z="0"/> 
+      <zplane rmin="shield_DS_beampipe_p1_DS_rmax" rmax="shield_DS_beampipe_p1_DS_rmax+mushield_DS_beampipe_thickness" z="shield_DS_beampipe_p1_length"/> 
+
+      <zplane rmin="shield_DS_beampipe_p2_US_rmax" rmax="shield_DS_beampipe_p2_US_rmax+mushield_DS_beampipe_thickness" z="shield_DS_beampipe_p1_length + 0.01"/> 
+      <zplane rmin="shield_DS_beampipe_p2_DS_rmax" rmax="shield_DS_beampipe_p2_DS_rmax+mushield_DS_beampipe_thickness" z="shield_DS_beampipe_p1_length + 0.01 + shield_DS_beampipe_p2_length"/>
+
+      <zplane rmin="shield_DS_beampipe_p3_US_rmax" rmax="shield_DS_beampipe_p3_US_rmax+mushield_DS_beampipe_thickness" z="shield_DS_beampipe_p1_length + 0.01 + shield_DS_beampipe_p2_length + 0.01"/> 
+      <zplane rmin="shield_DS_beampipe_p3_DS_rmax" rmax="shield_DS_beampipe_p3_DS_rmax+mushield_DS_beampipe_thickness" z="shield_DS_beampipe_p1_length + 0.01 + shield_DS_beampipe_p2_length + shield_DS_beampipe_p3_length"/>
+    </polycone>
+    
+
     <tessellated name="leftpcolcut">
 	<triangular vertex1="PCOLL2_lcut1" vertex2="PCOLL2_lcut2" vertex3="PCOLL2_lcut6" type="ABSOLUTE"/>
 	<quadrangular vertex1="PCOLL2_lcut6" vertex2="PCOLL2_lcut2" vertex3="PCOLL2_lcut3" vertex4="PCOLL2_lcut5" type="ABSOLUTE"/>
@@ -1370,6 +1384,11 @@
  <zplane rmin="31" rmax="32" z="8225.0-DOFFSET"/>
 </polycone>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSmubeampipe_col4">^M
+ <zplane rmin="32" rmax="32+mushield_DS_beampipe_thickness" z="8025.0-DOFFSET"/>
+ <zplane rmin="32" rmax="32+mushield_DS_beampipe_thickness" z="8225.0-DOFFSET"/>
+</polycone>
+
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe">
  <zplane rmin="36.6" rmax="39.6" z="11850.01-DOFFSET"/>
@@ -1411,6 +1430,51 @@
  <zplane rmin="96.8502" rmax="101.6" z="17004.7498-DOFFSET"/>
  <zplane rmin="96.8502" rmax="101.6" z="18699.41-DOFFSET"/>
 </polycone>
+
+
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSmubeampipe">^M
+ <zplane rmin="39.6"  rmax="39.6+mushield_DS_beampipe_thickness" z="11850.01-DOFFSET"/>
+ <zplane rmin="39.6" rmax="39.6+mushield_DS_beampipe_thickness" z="11900-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="39.6" rmax="42.8625+mushield_DS_beampipe_thickness" z="11900.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="39.6" rmax="42.8625+mushield_DS_beampipe_thickness" z="11900-DOFFSET"/>
+ <zplane rmin="42.8625" rmax="42.8625+mushield_DS_beampipe_thickness" z="11900-DOFFSET"/>
+ <zplane rmin="42.8625" rmax="42.8625+mushield_DS_beampipe_thickness" z="12300.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="42.8625" rmax="44.45+mushield_DS_beampipe_thickness" z="12300.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="42.8625" rmax="44.45+mushield_DS_beampipe_thickness" z="12300-DOFFSET"/>
+ <zplane rmin="44.45" rmax="44.45+mushield_DS_beampipe_thickness" z="12300-DOFFSET"/>
+ <zplane rmin="44.45" rmax="44.45+mushield_DS_beampipe_thickness" z="12700.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="44.45" rmax="46.0375+mushield_DS_beampipe_thickness" z="12700.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="44.45" rmax="46.0375+mushield_DS_beampipe_thickness" z="12700-DOFFSET"/>
+ <zplane rmin="46.0375" rmax="46.0375+mushield_DS_beampipe_thickness" z="12700-DOFFSET"/>
+ <zplane rmin="46.0375" rmax="46.0375+mushield_DS_beampipe_thickness" z="13200.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="46.0375" rmax="47.625+mushield_DS_beampipe_thickness" z="13200.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="46.0375" rmax="47.625+mushield_DS_beampipe_thickness" z="13200-DOFFSET"/>
+ <zplane rmin="47.625" rmax="47.625+mushield_DS_beampipe_thickness" z="13200-DOFFSET"/>
+ <zplane rmin="47.625" rmax="47.625+mushield_DS_beampipe_thickness" z="13600.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="47.625" rmax="50.8+mushield_DS_beampipe_thickness" z="13600.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="47.625" rmax="50.8+mushield_DS_beampipe_thickness" z="13600-DOFFSET"/>
+ <zplane rmin="50.8" rmax="50.8+mushield_DS_beampipe_thickness" z="13600-DOFFSET"/>
+ <zplane rmin="50.8" rmax="50.8+mushield_DS_beampipe_thickness" z="13800.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="50.8" rmax="57.15+mushield_DS_beampipe_thickness" z="13800.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="50.8" rmax="57.15+mushield_DS_beampipe_thickness" z="13800-DOFFSET"/>
+ <zplane rmin="57.15" rmax="57.15+mushield_DS_beampipe_thickness" z="13800-DOFFSET"/>
+ <zplane rmin="57.15" rmax="57.15+mushield_DS_beampipe_thickness" z="14250.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="57.15" rmax="63.5+mushield_DS_beampipe_thickness" z="14250.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="57.15" rmax="63.5+mushield_DS_beampipe_thickness" z="14250-DOFFSET"/>
+ <zplane rmin="63.5" rmax="63.5+mushield_DS_beampipe_thickness" z="14250-DOFFSET"/>
+ <zplane rmin="63.5" rmax="63.5+mushield_DS_beampipe_thickness" z="15000.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="63.5" rmax="76.2+mushield_DS_beampipe_thickness" z="15000.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="63.5" rmax="76.2+mushield_DS_beampipe_thickness" z="15000-DOFFSET"/>
+ <zplane rmin="76.2" rmax="76.2+mushield_DS_beampipe_thickness" z="15000-DOFFSET"/>
+ <zplane rmin="76.2" rmax="76.2+mushield_DS_beampipe_thickness" z="17000.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="76.2" rmax="101.6+mushield_DS_beampipe_thickness" z="17000.0-mushield_DS_beampipe_thickness-DOFFSET"/>
+ <zplane rmin="76.2" rmax="101.6+mushield_DS_beampipe_thickness" z="17000-DOFFSET"/>
+ <zplane rmin="101.6" rmax="101.6+mushield_DS_beampipe_thickness" z="17000-DOFFSET"/>
+ <zplane rmin="101.6" rmax="101.6+mushield_DS_beampipe_thickness" z="18699.41-DOFFSET"/>
+</polycone>
+
+
 
 </solids>
 
@@ -1702,6 +1766,15 @@
       <auxiliary auxtype="DetNo" auxvalue="56"/> 
    </volume>
 
+   <volume name="mushield_DS_beampipe_logic">
+      <!-- <materialref ref="Aluminum"/> -->
+      <materialref ref="Mumetal"/>
+      <solidref ref="mushield_DS_beampipe_solid"/>
+      <auxiliary auxtype="Color" auxvalue="blue"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
+      <auxiliary auxtype="DetNo" auxvalue="59"/> 
+   </volume>
+
 
 
      <volume name="logicDSbeampipe_col4">
@@ -1711,11 +1784,26 @@
         <auxiliary auxtype="DetNo" auxvalue="54"/>
      </volume>
 
+    <volume name="logicDSmubeampipe_col4">
+	<materialref ref="Mumetal"/>
+        <solidref ref="solid_DSmubeampipe_col4"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="60"/>
+     </volume>
+
     <volume name="logicDSbeampipe">
 	<materialref ref="Aluminum"/>
         <solidref ref="solid_DSbeampipe"/>
         <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
         <auxiliary auxtype="DetNo" auxvalue="52"/>
+     </volume>
+
+
+     <volume name="logicDSmubeampipe">
+	<materialref ref="Mumetal"/>
+        <solidref ref="solid_DSmubeampipe"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+        <auxiliary auxtype="DetNo" auxvalue="61"/>
      </volume>
 
     <volume name="logicDownstream">
@@ -1727,11 +1815,22 @@
         <volumeref ref="logicDSbeampipe_col4"/>
         <positionref ref="CENTER"/>
       </physvol>
+
+        <physvol name="DSmubeampipe_col4">
+        <volumeref ref="logicDSmubeampipe_col4"/>
+        <positionref ref="CENTER"/>
+      </physvol>
  
      <physvol name="DSbeampipe">
         <volumeref ref="logicDSbeampipe"/>
         <positionref ref="CENTER"/>
       </physvol>
+
+       <physvol name="DSmubeampipe">
+        <volumeref ref="logicDSmubeampipe"/>
+        <positionref ref="CENTER"/>
+      </physvol>
+
 
 <!-- Old beampipe design not in use now -->
 <!-- 
@@ -1754,6 +1853,10 @@
 <!--Commenting out beamshield-->
       <physvol>
         <volumeref ref="shield_DS_beampipe_logic"/>
+        <positionref ref="shield_DS_beampipe_center"/>
+      </physvol>
+       <physvol>
+        <volumeref ref="mushield_DS_beampipe_logic"/>
         <positionref ref="shield_DS_beampipe_center"/>
       </physvol>
 <!-- -->
