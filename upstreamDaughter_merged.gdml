@@ -246,7 +246,7 @@
     <position name="beampipe_3_center" unit="mm" x="0" y="0" z="COLL1_z + COLL1_THICK/2 + 1"/>
 
     <!--CAD based shielding beampipe for col-1 to end of US magnet -->
-    <constant name="mushield_US_beampipe_thickness" value="1"/>
+    <constant name="mushield_US_beampipe_thickness" value="0.7"/>
     <constant name="shield_US_beampipe_length" value="1945"/>
     <constant name="shield_US_beampipe_thickness" value="3"/>
     <constant name="shield_US_beampipe_US_rmin" value="25.5"/>  <!--25.5"/>-->
