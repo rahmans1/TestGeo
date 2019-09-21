@@ -1364,6 +1364,10 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher3" rmax1="1900" rmax2="1900" rmin1="shield_DS_beampipe_p3_DS_rmax+1" rmin2="shield_DS_beampipe_p3_DS_rmax+1" startphi="0" z="10"/>
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSwindow">^M
+ <zplane rmin="101.6" rmax="1020" z="18699.91-1.5-DOFFSET"/>
+ <zplane rmin="101.6" rmax="1020" z="18699.91-DOFFSET"/>
+</polycone>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe_col4">
  <zplane rmin="31" rmax="32" z="8025.0-DOFFSET"/>
@@ -1718,6 +1722,13 @@
         <auxiliary auxtype="DetNo" auxvalue="52"/>
      </volume>
 
+
+    <volume name="logicDSwindow">
+        <materialref ref="Aluminum"/>^M
+        <solidref ref="solid_DSwindow"/>
+        <auxiliary auxtype="Color" auxvalue="magenta"/>^M
+     </volume>
+
     <volume name="logicDownstream">
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeDownstream"/> -->
@@ -1732,6 +1743,13 @@
         <volumeref ref="logicDSbeampipe"/>
         <positionref ref="CENTER"/>
       </physvol>
+
+       <physvol name="DSwindow">^M
+        <volumeref ref="logicDSwindow"/>^M
+        <positionref ref="CENTER"/>^M
+      </physvol>
+
+
 
 <!-- Old beampipe design not in use now -->
 <!-- 

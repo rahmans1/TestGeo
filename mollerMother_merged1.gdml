@@ -24,6 +24,21 @@
 <solids>
      <box lunit="mm" name="boxMother" x="200000" y="200000" z="200000"/>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe_vacuum">
+ <zplane rmin="0" rmax="96.8502" z="18699.41"/>
+ <zplane rmin="0" rmax="96.8502" z="20000.0"/>
+ <zplane rmin="0" rmax="96.8502" z="20000.0"/>
+ <zplane rmin="0" rmax="96.8502" z="20006.35"/>
+ <zplane rmin="0" rmax="120.65"  z="20006.35"/>
+ <zplane rmin="0" rmax="120.65"  z="26000.0"/>
+ <zplane rmin="0" rmax="120.65"  z="26000.0"/>
+ <zplane rmin="0" rmax="120.65"  z="26006.35"/>
+ <zplane rmin="0" rmax="146.05"  z="26006.35"/>
+ <zplane rmin="0" rmax="146.05"  z="29000.0"/>
+</polycone>
+
+
+
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
  <zplane rmin="96.8502" rmax="101.6" z="18699.41"/>
  <zplane rmin="96.8502" rmax="101.6" z="20000.0"/>
@@ -48,6 +63,13 @@
         <auxiliary auxtype="DetNo" auxvalue="53"/>
      </volume>
 
+
+     <volume name="logicDbeampipe_vacuum">
+        <materialref ref="Vacuum"/>
+        <solidref ref="solid_Dbeampipe_vacuum"/>
+        <auxiliary auxtype="Color" auxvalue="blue"/>
+    </volume>
+
     
     <volume name="logicMother">
       <materialref ref="G4_AIR"/>
@@ -55,6 +77,11 @@
 
       <physvol name="Dbeampipe">
         <volumeref ref="logicDbeampipe"/>
+        <positionref ref="pipeCenter"/>
+      </physvol>
+
+      <physvol name="Dbeampipe_vacuum">
+        <volumeref ref="logicDbeampipe_vacuum"/>
         <positionref ref="pipeCenter"/>
       </physvol>
 
