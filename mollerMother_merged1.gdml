@@ -50,7 +50,7 @@
 
     
     <volume name="logicMother">
-      <materialref ref="Vacuum"/>
+      <materialref ref="G4_AIR"/>
       <solidref ref="boxMother"/>
 
       <physvol name="Dbeampipe">

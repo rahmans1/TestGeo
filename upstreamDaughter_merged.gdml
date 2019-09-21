@@ -716,6 +716,11 @@
 
 
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USwindow">
+  <zplane rmin="0" rmax="500" z="3200-UOFFSET"/>
+  <zplane rmin="0" rmax="500" z="3200.5-UOFFSET"/>
+</polycone>
+
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12">
  <zplane rmin="26.703" rmax="29.703" z="5675.0-UOFFSET"/>
  <zplane rmin="26.703" rmax="29.703" z="5700.0-UOFFSET"/>
@@ -916,6 +921,11 @@
         <auxiliary auxtype="DetNo" auxvalue="51"/>
      </volume>
 
+     <volume  name="logicUSwindow">
+         <materialref ref="G4_Al"/>
+         <solidref ref="solid_USwindow"/>
+     </volume>
+
     <volume name="logicUpstream">
       <materialref ref="VacuumColl"/>
       <!-- <solidref ref="tubeUpstream"/> -->
@@ -928,6 +938,11 @@
 
      <physvol name="USbeampipe">
         <volumeref ref="logicUSbeampipe"/>
+        <positionref ref="CENTER"/>
+      </physvol>
+
+      <physvol name="USwindow">
+        <volumeref ref="logicUSwindow"/>
         <positionref ref="CENTER"/>
       </physvol>
 
