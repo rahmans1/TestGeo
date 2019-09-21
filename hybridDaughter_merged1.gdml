@@ -1365,8 +1365,8 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSwindow">^M
- <zplane rmin="101.6" rmax="1020" z="18699.91-1.5-DOFFSET"/>
- <zplane rmin="101.6" rmax="1020" z="18699.91-DOFFSET"/>
+ <zplane rmin="101.6" rmax="1020" z="18699.41-1.5-DOFFSET"/>
+ <zplane rmin="101.6" rmax="1020" z="18699.41-DOFFSET"/>
 </polycone>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSbeampipe_col4">
