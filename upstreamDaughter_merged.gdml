@@ -345,6 +345,8 @@
     <!-- inner photon collimating beampipe near collimator 1 -->
     <cone aunit="deg" deltaphi="360" lunit="mm" name="solid_shield_US_beampipe_1" rmax1="shield_US_beampipe_US_rmax" rmax2="shield_US_beampipe_DS_rmax" rmin1="shield_US_beampipe_US_rmin" rmin2="shield_US_beampipe_DS_rmin" startphi="0" z="shield_US_beampipe_length"/>
 
+
+    <cone aunit="deg" deltaphi="360" lunit="mm" name="solid_shield_US_beampipe_1_vacuum" rmin1="0" rmin2="0" rmax1="shield_US_beampipe_US_rmin" rmax2="shield_US_beampipe_DS_rmin" startphi="0" z="shield_US_beampipe_length"/>
     <!-- New merged col-1 -->
     <!--R max will be same as before, I'm starting with bore radius of the exit bore for whole col-1 and then subtract appropriately -->
     <tube aunit="deg" deltaphi="360" lunit="mm" name="col1_0" rmax="COLL1_R4_U" rmin="0" startphi="0" z="COLL1_THICK"/> 
@@ -721,6 +723,16 @@
   <zplane rmin="0" rmax="500" z="3200.5-UOFFSET"/>
 </polycone>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12_vacuum">^M
+ <zplane rmin="0" rmax="26.703" z="5675.0-UOFFSET"/>
+ <zplane rmin="0" rmax="26.703" z="5700.0-UOFFSET"/>
+ <zplane rmin="0" rmax="26.703" z="5700.0-UOFFSET"/>
+ <zplane rmin="0" rmax="26.703" z="5703.0-UOFFSET"/>
+ <zplane rmin="0" rmax="32.0" z="5703.0-UOFFSET"/>
+ <zplane rmin="0" rmax="32.0" z="5750.0-UOFFSET"/>^M
+</polycone>
+
+
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12">
  <zplane rmin="26.703" rmax="29.703" z="5675.0-UOFFSET"/>
  <zplane rmin="26.703" rmax="29.703" z="5700.0-UOFFSET"/>
@@ -728,6 +740,11 @@
  <zplane rmin="26.703" rmax="35.0" z="5703.0-UOFFSET"/>
  <zplane rmin="32.0" rmax="35.0" z="5703.0-UOFFSET"/>
  <zplane rmin="32.0" rmax="35.0" z="5750.0-UOFFSET"/>
+</polycone>
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_vacuum">^M
+ <zplane rmin="0" rmax="31" z="7845.001-UOFFSET"/>
+ <zplane rmin="0" rmax="31" z="8025.0-UOFFSET"/>^M
 </polycone>
 
 
@@ -898,28 +915,47 @@
     </volume>
 
 
-    <volume name="shield_US_beampipe_1_logic">
-      <!-- <materialref ref="Aluminum"/> -->
-      <materialref ref="Tungsten"/>
-      <solidref ref="solid_shield_US_beampipe_1"/>
-      <auxiliary auxtype="Color" auxvalue="blue"/>
-      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
-      <auxiliary auxtype="DetNo" auxvalue="55"/>^
+    <volume name="shield_US_beampipe_1_logic_vacuum">
+      <materialref ref="Vacuum"/>
+      <solidref ref="solid_shield_US_beampipe_1_vacuum"/>
+      <auxiliary auxtype="Color" auxvalue="cyan"/>
     </volume>
 
-     <volume name="logicUSbeampipe_col12">
-	<materialref ref="Aluminum"/>
-        <solidref ref="solid_USbeampipe_col12"/>
-        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-        <auxiliary auxtype="DetNo" auxvalue="50"/>
+     <volume name="logicUSbeampipe_col12_vacuum">
+	<materialref ref="Vacuum"/>
+        <solidref ref="solid_USbeampipe_col12_vacuum"/>
+        <auxiliary auxtype="Color" auxvalue="cyan"/>
      </volume>
 
-     <volume name="logicUSbeampipe">
-	<materialref ref="Aluminum"/>
-        <solidref ref="solid_USbeampipe"/>
-        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-        <auxiliary auxtype="DetNo" auxvalue="51"/>
+     <volume name="logicUSbeampipe_vacuum">
+	<materialref ref="Vacuum"/>
+        <solidref ref="solid_USbeampipe_vacuum"/>
+        <auxiliary auxtype="Color" auxvalue="cyan"/>
      </volume>
+
+    <volume name="shield_US_beampipe_1_logic">^M
+      <!-- <materialref ref="Aluminum"/> -->^M
+      <materialref ref="Tungsten"/>^M
+      <solidref ref="solid_shield_US_beampipe_1"/>^M
+      <auxiliary auxtype="Color" auxvalue="blue"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
+      <auxiliary auxtype="DetNo" auxvalue="55"/>^^M
+    </volume>
+
+     <volume name="logicUSbeampipe_col12">^M
+        <materialref ref="Aluminum"/>^M
+        <solidref ref="solid_USbeampipe_col12"/>^M
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
+        <auxiliary auxtype="DetNo" auxvalue="50"/>^M
+     </volume>
+
+     <volume name="logicUSbeampipe">^M
+        <materialref ref="Aluminum"/>^M
+        <solidref ref="solid_USbeampipe"/>
+        <auxiliary auxtype="SensDet" auxvalue="planeDet"/>^M
+        <auxiliary auxtype="DetNo" auxvalue="51"/>^M
+     </volume>^M
+
 
      <volume  name="logicUSwindow">
          <materialref ref="G4_Al"/>
@@ -928,9 +964,22 @@
      </volume>
 
     <volume name="logicUpstream">
-      <materialref ref="VacuumColl"/>
+      <materialref ref="G4_He"/>
       <!-- <solidref ref="tubeUpstream"/> -->
       <solidref ref="boxUpstream"/>
+
+     <physvol name="USbeampipe_col12_vacuum">^M
+        <volumeref ref="logicUSbeampipe_col12_vacuum"/>^M
+        <positionref ref="CENTER"/>^M
+      </physvol>^M
+
+     <physvol name="USbeampipe_vacuum">^M
+        <volumeref ref="logicUSbeampipe_vacuum"/>^M
+        <positionref ref="CENTER"/>^M
+      </physvol>
+
+
+
 
      <physvol name="USbeampipe_col12">
         <volumeref ref="logicUSbeampipe_col12"/>
@@ -1066,6 +1115,12 @@
         <positionref ref="beampipe_3_center"/>
       </physvol>
 -->
+
+
+      <physvol>^M
+        <volumeref ref="shield_US_beampipe_1_logic_vacuum"/>^M
+        <positionref ref="shield_US_beampipe_center"/>^M
+      </physvol>
 
       <physvol>
         <volumeref ref="shield_US_beampipe_1_logic"/>
