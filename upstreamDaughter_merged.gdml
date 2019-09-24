@@ -922,7 +922,7 @@
      </volume>
 
      <volume  name="logicUSwindow">
-         <materialref ref="G4_Be"/>
+	     <materialref ref="G4_Al"/>
          <solidref ref="solid_USwindow"/>
          <auxiliary auxtype="Color" auxvalue="magenta"/>
      </volume>

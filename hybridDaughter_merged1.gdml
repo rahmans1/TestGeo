@@ -1724,7 +1724,7 @@
 
 
     <volume name="logicDSwindow">
-        <materialref ref="G4_Be"/>^M
+        <materialref ref="G4_Al"/>^M
         <solidref ref="solid_DSwindow"/>
         <auxiliary auxtype="Color" auxvalue="magenta"/>^M
      </volume>
