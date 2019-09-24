@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define> 
   <position name="hallCenter" x="0" y="0" z="4000"/>
@@ -25,31 +25,31 @@
      <box lunit="mm" name="boxMother" x="200000" y="200000" z="200000"/>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe_vacuum">
- <zplane rmin="0" rmax="96.8502" z="18699.41"/>
- <zplane rmin="0" rmax="96.8502" z="20000.0"/>
- <zplane rmin="0" rmax="96.8502" z="20000.0"/>
- <zplane rmin="0" rmax="96.8502" z="20006.35"/>
- <zplane rmin="0" rmax="120.65"  z="20006.35"/>
- <zplane rmin="0" rmax="120.65"  z="26000.0"/>
- <zplane rmin="0" rmax="120.65"  z="26000.0"/>
- <zplane rmin="0" rmax="120.65"  z="26006.35"/>
- <zplane rmin="0" rmax="146.05"  z="26006.35"/>
- <zplane rmin="0" rmax="146.05"  z="29000.0"/>
+ <zplane rmin="0" rmax="96.8502+200" z="18699.41"/>
+ <zplane rmin="0" rmax="96.8502+200" z="20000.0"/>
+ <zplane rmin="0" rmax="96.8502+200" z="20000.0"/>
+ <zplane rmin="0" rmax="96.8502+200" z="20006.35"/>
+ <zplane rmin="0" rmax="120.65+200"  z="20006.35"/>
+ <zplane rmin="0" rmax="120.65+200"  z="26000.0"/>
+ <zplane rmin="0" rmax="120.65+200"  z="26000.0"/>
+ <zplane rmin="0" rmax="120.65+200"  z="26006.35"/>
+ <zplane rmin="0" rmax="146.05+200"  z="26006.35"/>
+ <zplane rmin="0" rmax="146.05+200"  z="29000.0"/>
 </polycone>
 
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
- <zplane rmin="96.8502" rmax="101.6" z="18699.41"/>
- <zplane rmin="96.8502" rmax="101.6" z="20000.0"/>
- <zplane rmin="96.8502" rmax="127.0" z="20000.0"/>
- <zplane rmin="96.8502" rmax="127.0" z="20006.35"/>
- <zplane rmin="120.65" rmax="127.0" z="20006.35"/>
- <zplane rmin="120.65" rmax="127.0" z="26000.0"/>
- <zplane rmin="120.65" rmax="152.4" z="26000.0"/>
- <zplane rmin="120.65" rmax="152.4" z="26006.35"/>
- <zplane rmin="146.05" rmax="152.4" z="26006.35"/>
- <zplane rmin="146.05" rmax="152.4" z="29000.0"/>
+ <zplane rmin="96.8502+200" rmax="101.6+200" z="18699.41"/>
+ <zplane rmin="96.8502+200" rmax="101.6+200" z="20000.0"/>
+ <zplane rmin="96.8502+200" rmax="127.0+200" z="20000.0"/>
+ <zplane rmin="96.8502+200" rmax="127.0+200" z="20006.35"/>
+ <zplane rmin="120.65+200" rmax="127.0+200" z="20006.35"/>
+ <zplane rmin="120.65+200" rmax="127.0+200" z="26000.0"/>
+ <zplane rmin="120.65+200" rmax="152.4+200" z="26000.0"/>
+ <zplane rmin="120.65+200" rmax="152.4+200" z="26006.35"/>
+ <zplane rmin="146.05+200" rmax="152.4+200" z="26006.35"/>
+ <zplane rmin="146.05+200" rmax="152.4+200" z="29000.0"/>
 </polycone>
 
 </solids>
@@ -86,7 +86,7 @@
       </physvol>
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/targetDaughter_merged1.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/targetDaughter_merged1.gdml"/>
       <positionref ref="targetCenter"/>
       <rotationref ref="identity"/>
       </physvol>
@@ -99,32 +99,32 @@
 -->
 <!--
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
       <positionref ref="detectorCenter"/>
       <rotationref ref="identity"/>
       </physvol>
 -->      
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged1.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged1.gdml"/>
       <position name="detectorCenter1" unit="mm" x="0.0" y="0.0" z="31537"/>
       <rotationref ref="identity"/>
       </physvol>
 
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
       <positionref ref="upstreamCenter"/>
       <rotationref ref="identity"/>
       </physvol>
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/hybridDaughter_merged1.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/hybridDaughter_merged1.gdml"/>
       <positionref ref="hybridCenter"/>
       <rotationref ref="identity"/>
       </physvol>   
 <!--
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/beampipe.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/beampipe.gdml"/>
       <positionref ref="pipeCenter"/>
       <rotationref ref="identity"/>
       </physvol>  
