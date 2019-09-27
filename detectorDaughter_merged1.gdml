@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/rahmans/geometry/geometry_optics_beam/materials.xml">
+<!ENTITY materials SYSTEM "materials.xml">
 ]>
 
-<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define>
 	<position name="v0" x="60.4388" y="-36.6311" z="65.0000" unit="mm"/>

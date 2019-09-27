@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE gdml [
-<!ENTITY materials SYSTEM "/home/rahmans/geometry/geometry_optics_beam/materials.xml">
+<!ENTITY materials SYSTEM "materials.xml">
 ]>
 
-<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define>
     <constant name="PI" value="1.*pi"/>
@@ -1380,7 +1380,7 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_DSwindow">^M
- <zplane rmin="101.6" rmax="1020" z="18699.41-1.5-DOFFSET"/>
+ <zplane rmin="101.6" rmax="1020" z="18699.41-0.13-DOFFSET"/>
  <zplane rmin="101.6" rmax="1020" z="18699.41-DOFFSET"/>
 </polycone>
 
@@ -1983,7 +1983,7 @@
    -->
 <!--
       <physvol>
-	<file name="/home/rahmans/geometry/geometry_optics_beam/beampipe.gdml"/>
+	<file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/beampipe.gdml"/>
         <position name="beampipe_pos" unit="mm" z="17810+11140/2-DOFFSET"/>
       </physvol>
 -->         

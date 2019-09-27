@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/schema/gdml.xsd">
 
 <define> 
   <position name="hallCenter" x="0" y="0" z="4000"/>
@@ -30,7 +30,7 @@
       <solidref ref="boxMother"/>
 
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/targetDaughter_merged.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/targetDaughter_merged.gdml"/>
       <positionref ref="targetCenter"/>
       <rotationref ref="identity"/>
       </physvol>
@@ -42,19 +42,19 @@
       </physvol>
 -->
       <physvol>
-      <file name="/home/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
       <positionref ref="detectorCenter"/>
       <rotationref ref="identity"/>
       </physvol>
 
       <physvol>
-	    <file name="/home/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
+	    <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
 	    <positionref ref="upstreamCenter"/>
     	<rotationref ref="identity"/>
       </physvol>
 
       <physvol>
-    	<file name="/home/rahmans/geometry/geometry_optics_beam/hybridDaughter_merged.gdml"/>
+    	<file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/hybridDaughter_merged.gdml"/>
 	    <positionref ref="hybridCenter"/>
     	<rotationref ref="identity"/>
       </physvol>    
