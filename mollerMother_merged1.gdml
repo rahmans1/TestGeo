@@ -25,23 +25,39 @@
      <box lunit="mm" name="boxMother" x="200000" y="200000" z="200000"/>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe_vacuum">
- <zplane rmin="0" rmax="580"  z="24000.0"/>
- <zplane rmin="0" rmax="580"  z="27800.0"/>
- <zplane rmin="0" rmax="580"  z="27800.0"/>
- <zplane rmin="0" rmax="580"  z="27806.0"/>
- <zplane rmin="0" rmax="700"  z="27806.0"/>
- <zplane rmin="0" rmax="700"  z="30300"/>
+ <zplane rmin="0" rmax="506" z="24000.0"/>
+ <zplane rmin="0" rmax="506" z="25000.0"/>
+ <zplane rmin="0" rmax="506" z="25000.0"/>
+ <zplane rmin="0" rmax="506" z="25006.0"/>
+ <zplane rmin="0" rmax="540" z="25006.0"/>
+ <zplane rmin="0" rmax="540" z="26500.0"/>
+ <zplane rmin="0" rmax="540" z="26500.0"/>
+ <zplane rmin="0" rmax="540" z="26506.0"/>
+ <zplane rmin="0" rmax="595" z="26506.0"/>
+ <zplane rmin="0" rmax="595" z="29000.0"/>
+ <zplane rmin="0" rmax="595" z="29000.0"/>
+ <zplane rmin="0" rmax="595" z="29006.0"/>
+ <zplane rmin="0" rmax="650" z="29006.0"/>
+ <zplane rmin="0" rmax="650" z="30300.0"/>
 </polycone>
 
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
- <zplane rmin="580" rmax="586" z="24000.0"/>
- <zplane rmin="580" rmax="586" z="27800.0"/>
- <zplane rmin="580" rmax="700" z="27800.0"/>
- <zplane rmin="580" rmax="700" z="27806.0"/>
- <zplane rmin="700" rmax="706" z="27806.0"/>
- <zplane rmin="700" rmax="706" z="30300"/>
+ <zplane rmin="506" rmax="509" z="24000.0"/>
+ <zplane rmin="506" rmax="509" z="25000.0"/>
+ <zplane rmin="506" rmax="546" z="25000.0"/>
+ <zplane rmin="506" rmax="546" z="25006.0"/>
+ <zplane rmin="540" rmax="546" z="25006.0"/>
+ <zplane rmin="540" rmax="546" z="26500.0"/>
+ <zplane rmin="540" rmax="601" z="26500.0"/>
+ <zplane rmin="540" rmax="601" z="26506.0"/>
+ <zplane rmin="595" rmax="601" z="26506.0"/>
+ <zplane rmin="595" rmax="601" z="29000.0"/>
+ <zplane rmin="595" rmax="656" z="29000.0"/>
+ <zplane rmin="595" rmax="656" z="29006.0"/>
+ <zplane rmin="650" rmax="656" z="29006.0"/>
+ <zplane rmin="650" rmax="656" z="30300.0"/>
 </polycone>
 
 </solids>
