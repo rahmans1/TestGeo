@@ -1367,9 +1367,9 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher4" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
 
-<cone name="solidCollar1" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="650" rmax1="700" rmin2="650" rmax2="700" z="100"/>
-<cone name="solidCollar2" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="732" rmax1="770" rmin2="732" rmax2="770" z="100"/>
-<cone name="solidCollar3" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="928" rmax1="1000" rmin2="928" rmax2="1000" z="100"/>
+<cone name="solidCollar1" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="650" rmax1="1900" rmin2="650" rmax2="1900" z="100"/>
+<cone name="solidCollar2" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="732" rmax1="1900" rmin2="732" rmax2="1900" z="100"/>
+<cone name="solidCollar3" lunit="mm" aunit="rad" startphi="0" deltaphi="2*pi" rmin1="928" rmax1="1900" rmin2="928" rmax2="1900" z="100"/>
 
   
 <xtru name="solidLintel1" lunit="mm">
@@ -1771,52 +1771,52 @@
 
    
      <volume name="logicCollar1">
-	     <materialref ref="Lead"/>
+	     <materialref ref="G4_Fe"/>
 	     <solidref ref="solidCollar1"/>
      </volume>
      
      <volume name="logicCollar2">
-	     <materialref ref="Lead"/>
+	     <materialref ref="G4_Fe"/>
 	     <solidref ref="solidCollar2"/>
      </volume>
 
       <volume name="logicCollar3">
-	     <materialref ref="Lead"/>
+	     <materialref ref="G4_Fe"/>
 	     <solidref ref="solidCollar3"/>
      </volume>
 
            <volume name="logicLintel1">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel1"/>
 	   </volume>
 
 	   <volume name="logicLintel2">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel2"/>
 	   </volume>
 
 	   <volume name="logicLintel3">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel3"/>
 	   </volume>
 
 	   <volume name="logicLintel4">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel4"/>
 	   </volume>
 
 	   <volume name="logicLintel5">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel5"/>
 	   </volume>
 
 	   <volume name="logicLintel6">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel6"/>
 	   </volume>
 
 	   <volume name="logicLintel7">
-		   <materialref ref="Lead"/>
+		   <materialref ref="G4_Fe"/>
 		   <solidref ref="solidLintel7"/>
 	   </volume>
 
