@@ -735,10 +735,25 @@
  <zplane rmin="31" rmax="32" z="7845.001-UOFFSET"/>
  <zplane rmin="31" rmax="32" z="8025.0-UOFFSET"/>
 </polycone>
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solUSTracker">
+ <zplane rmin="2050" rmax="2060" z="3200-UOFFSET"/>
+ <zplane rmin="2050" rmax="2060" z="8025-UOFFSET"/>
+</polycone>
+
 </solids>
 
 
 <structure>
+
+     <volume name="logicUSTracker">
+      <materialref ref="G4_Fe"/>
+      <solidref ref="solUSTracker"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="91"/>
+    </volume>
+
+     
     <volume name="logicUScoll_1">
 	<!--<materialref ref="Copper"/>--> 
 	<materialref ref="CW95"/>
@@ -942,6 +957,13 @@
         <positionref ref="CENTER"/>
       </physvol>
      -->
+       <physvol name="UStracker">
+        <volumeref ref="logicUSTracker"/>
+        <position name="UStracker_pos" unit="mm" x="0" y="0" z="0"/>
+     </physvol>
+
+
+
       <physvol name="USwindow">
         <volumeref ref="logicUSwindow"/>
         <positionref ref="CENTER"/>

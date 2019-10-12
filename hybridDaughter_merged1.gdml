@@ -1487,9 +1487,35 @@
  <zplane rmin="96.8502" rmax="101.6" z="18699.41-DOFFSET"/>
 </polycone>
 
+
+<cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher12" rmax1="2050" rmax2="2050" rmin1="925" rmin2="925" startphi="0" z="10"/>
+
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solDSTracker">
+ <zplane rmin="2050" rmax="2060" z="8025-DOFFSET"/>
+ <zplane rmin="2050" rmax="2060" z="23990-DOFFSET"/>
+</polycone>
+
+
+
 </solids>
 
 <structure>
+
+    <volume name="logicWasher_12">
+      <materialref ref="G4_Fe"/>
+      <solidref ref="solWasher12"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="93"/>
+    </volume>
+
+
+     <volume name="logicDSTracker">
+      <materialref ref="G4_Fe"/>
+      <solidref ref="solDSTracker"/>
+      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+      <auxiliary auxtype="DetNo" auxvalue="92"/>
+    </volume>
+
 
     <volume name="logicWasher_3">
       <materialref ref="VacuumDet"/>
@@ -1876,6 +1902,18 @@
         <positionref ref="CENTER"/>^M
    </physvol>
 
+   <physvol name="planeDet_12">
+        <volumeref ref="logicWasher_12"/>
+        <position name="wash_phys_12_pos" unit="mm" x="0" y="0" z="23995-DOFFSET"/>
+   </physvol>
+
+     <physvol name="DStracker">
+        <volumeref ref="logicDSTracker"/>
+        <position name="DStracker_pos" unit="mm" x="0" y="0" z="0"/>
+     </physvol>
+
+
+<!--
 <physvol name="collar1">
  	<volumeref ref="logicCollar1"/>
 	<position lunit="mm" name="collar1pos" x="0" y="0" z="17861-DOFFSET"/>
@@ -1928,7 +1966,7 @@
  <position name="lintel7pos" x="-283.064370044" y="354.95149304" z="12850-DOFFSET"/>
  <rotation name="lintel7rot" x="0" y="0" z="-8.52718005974"/>
 </physvol>
-
+-->
 
 
 <!-- Old beampipe design not in use now -->
