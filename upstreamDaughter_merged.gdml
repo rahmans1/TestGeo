@@ -732,6 +732,10 @@
  <zplane rmin="0" rmax="32.0" z="5750.0-UOFFSET"/>^M
 </polycone>
 
+<polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_col2_vacuum">
+ <zplane rmin="0" rmax="21.336" z="5750.0-UOFFSET"/>
+ <zplane rmin="0" rmax="21.336" z="5900.0-UOFFSET"/>
+</polycone> 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USbeampipe_col12">
  <zplane rmin="26.703" rmax="29.703" z="5675.0-UOFFSET"/>
@@ -925,7 +929,14 @@
 	<materialref ref="Vacuum"/>
         <solidref ref="solid_USbeampipe_col12_vacuum"/>
         <auxiliary auxtype="Color" auxvalue="cyan"/>
+    </volume>
+
+     <volume name="logic_col2_vacuum">^M
+        <materialref ref="Vacuum"/>^M
+        <solidref ref="solid_col2_vacuum"/>^M
+        <auxiliary auxtype="Color" auxvalue="cyan"/>
      </volume>
+
 
      <volume name="logicUSbeampipe_vacuum">
 	<materialref ref="Vacuum"/>
@@ -985,6 +996,11 @@
         <volumeref ref="logicUSbeampipe_col12"/>
         <positionref ref="CENTER"/>
       </physvol>
+
+    <physvol name="col2_vacuum">^M
+        <volumeref ref="logic_col2_vacuum"/>^M
+        <positionref ref="CENTER"/>^M
+    </physvol>
 
      <physvol name="USbeampipe">
         <volumeref ref="logicUSbeampipe"/>
