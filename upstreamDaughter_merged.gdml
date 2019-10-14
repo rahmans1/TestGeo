@@ -716,6 +716,10 @@
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher1" rmax1="1900" rmax2="1900" rmin1="shield_US_beampipe_DS_rmax+1" rmin2="shield_US_beampipe_DS_rmax+1" startphi="0" z="10"/>
      <cone aunit="deg" deltaphi="360" lunit="mm" name="solWasher2" rmax1="1900" rmax2="1900" rmin1="0" rmin2="0" startphi="0" z="10"/>
 
+     <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solUSTracker">
+	      <zplane rmin="2050" rmax="2060" z="3200-UOFFSET"/>
+              <zplane rmin="2050" rmax="2060" z="8025-UOFFSET"/>
+       </polycone>
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_USwindow">
@@ -760,6 +764,15 @@
 
 
 <structure>
+
+    <volume name="logicUSTracker">
+	     <materialref ref="G4_Fe"/>
+	      <solidref ref="solUSTracker"/>
+	      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	       <auxiliary auxtype="DetNo" auxvalue="91"/>
+    </volume>
+
+
     <volume name="logicUScoll_1">
 	<!--<materialref ref="Copper"/>--> 
 	<materialref ref="CW95"/>
@@ -978,6 +991,13 @@
       <materialref ref="G4_He"/>
       <!-- <solidref ref="tubeUpstream"/> -->
       <solidref ref="boxUpstream"/>
+
+    <physvol name="UStracker">
+        <volumeref ref="logicUSTracker"/>
+        <position name="UStracker_pos" unit="mm" x="0" y="0" z="0"/>
+    </physvol>
+
+
 
      <physvol name="USbeampipe_col12_vacuum">^M
         <volumeref ref="logicUSbeampipe_col12_vacuum"/>^M
