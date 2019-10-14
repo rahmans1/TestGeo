@@ -5,7 +5,7 @@
   <position name="hallCenter" x="0" y="0" z="4000"/>
   <position name="targetCenter" x="0" y="0" z="0"/>
   <position name="upstreamCenter" x="0" y="0" z="7000."/>
-  <position name="hybridCenter" x="0" y="0" z="13366.57"/>
+  <position name="hybridCenter" x="0" y="0" z="13366.57+5300.59/2"/>
   <position name="detectorCenter" x="0" y="0" z="28500."/>
  <!-- <position name="pipeCenter" x="0" y="0" z="17810+11140/2"/>-->
   <position name="pipeCenter" x="0" y="0" z="0"/>
@@ -25,11 +25,7 @@
      <box lunit="mm" name="boxMother" x="200000" y="200000" z="200000"/>
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe_vacuum">
- <zplane rmin="0" rmax="96.8502" z="18699.41"/>
- <zplane rmin="0" rmax="96.8502" z="20000.0"/>
- <zplane rmin="0" rmax="96.8502" z="20000.0"/>
- <zplane rmin="0" rmax="96.8502" z="20006.35"/>
- <zplane rmin="0" rmax="120.65"  z="20006.35"/>
+ <zplane rmin="0" rmax="120.65"  z="24000.0"/>
  <zplane rmin="0" rmax="120.65"  z="26000.0"/>
  <zplane rmin="0" rmax="120.65"  z="26000.0"/>
  <zplane rmin="0" rmax="120.65"  z="26006.35"/>
@@ -40,11 +36,7 @@
 
 
 <polycone aunit="deg" startphi="0" deltaphi="360" lunit="mm" name="solid_Dbeampipe">
- <zplane rmin="96.8502" rmax="101.6" z="18699.41"/>
- <zplane rmin="96.8502" rmax="101.6" z="20000.0"/>
- <zplane rmin="96.8502" rmax="127.0" z="20000.0"/>
- <zplane rmin="96.8502" rmax="127.0" z="20006.35"/>
- <zplane rmin="120.65" rmax="127.0" z="20006.35"/>
+ <zplane rmin="120.65" rmax="127.0" z="24000.0"/>
  <zplane rmin="120.65" rmax="127.0" z="26000.0"/>
  <zplane rmin="120.65" rmax="152.4" z="26000.0"/>
  <zplane rmin="120.65" rmax="152.4" z="26006.35"/>
@@ -90,26 +82,28 @@
       <positionref ref="targetCenter"/>
       <rotationref ref="identity"/>
       </physvol>
-<!--
+
       <physvol>
-      <file name="geometry_merged/hallDaughter_merged.gdml"/>
+      <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/hallDaughter_merged.gdml"/>
       <positionref ref="hallCenter"/>
       <rotationref ref="identity"/>
       </physvol>
--->
+
 <!--
       <physvol>
       <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged.gdml"/>
       <positionref ref="detectorCenter"/>
       <rotationref ref="identity"/>
       </physvol>
--->      
+-->     
+
+<!--
       <physvol>
       <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/detectorDaughter_merged1.gdml"/>
       <position name="detectorCenter1" unit="mm" x="0.0" y="0.0" z="31537"/>
       <rotationref ref="identity"/>
       </physvol>
-
+-->
 
       <physvol>
       <file name="/home/j/jmammei/rahmans/geometry/geometry_optics_beam/upstreamDaughter_merged.gdml"/>
